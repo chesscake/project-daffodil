@@ -1,0 +1,1098 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Setting up a Route &mdash; Mysterious Messenger Wiki v3.2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Plot Branches" href="plot-branches.html" />
+    <link rel="prev" title="Emails" href="emails.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Mysterious Messenger Wiki
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Home.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Full Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits-and-acknowledgements.html">Credits and Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beginners-guide.html">Beginner’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-setup.html">Git Setup</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chatrooms.html">Chatrooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phone-calls.html">Phone Calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-messages.html">Text Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="story-mode.html">Story Mode (VN)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emails.html">Emails</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting up a Route</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#adding-timeline-items">Adding Timeline Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chatrooms">Chatrooms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#attached-story-mode">Attached Story Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#story-mode">Story Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#story-calls">Story Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-party">The Party</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-route-day">Example Route Day</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-route">Setting up the Route</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expired-timeline-items-and-real-time-mode">Expired Timeline Items and Real-Time Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changing-content-if-expired">Changing Content If Expired</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backing-out-vs-real-time-expiry">Backing out vs. real-time expiry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ending-a-route">Ending a Route</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customizing-the-route-select-screen">Customizing the Route Select Screen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#providing-multiple-routes">Providing Multiple Routes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unlockable-routes">Unlockable Routes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-an-introduction">Creating an Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#essential-setup-functions">Essential Setup Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#leaving-out-the-introduction">Leaving out the Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-introduction-features">Additional Introduction Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#including-an-incoming-call">Including an Incoming Call</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#including-a-story-mode">Including a Story Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#including-a-chatroom-with-other-features">Including a Chatroom with Other Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-example">Introduction Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plot-branches.html">Plot Branches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-characters.html">Creating Characters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cg-albums.html">CG Albums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mysterious Messenger Wiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Setting up a Route</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/route-setup.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setting-up-a-route">
+<h1>Setting up a Route<a class="headerlink" href="#setting-up-a-route" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Navigation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting up a Route</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#adding-timeline-items">Adding Timeline Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chatrooms">Chatrooms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#attached-story-mode">Attached Story Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#story-mode">Story Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#story-calls">Story Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-party">The Party</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-route-day">Example Route Day</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-route">Setting up the Route</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expired-timeline-items-and-real-time-mode">Expired Timeline Items and Real-Time Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changing-content-if-expired">Changing Content If Expired</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backing-out-vs-real-time-expiry">Backing out vs. real-time expiry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ending-a-route">Ending a Route</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customizing-the-route-select-screen">Customizing the Route Select Screen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#providing-multiple-routes">Providing Multiple Routes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unlockable-routes">Unlockable Routes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-an-introduction">Creating an Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#essential-setup-functions">Essential Setup Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#leaving-out-the-introduction">Leaving out the Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-introduction-features">Additional Introduction Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#including-an-incoming-call">Including an Incoming Call</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#including-a-story-mode">Including a Story Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#including-a-chatroom-with-other-features">Including a Chatroom with Other Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-example">Introduction Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Example files to look at:</p>
+<ul class="simple">
+<li><p>route_setup.rpy</p></li>
+<li><p>route_example.rpy</p></li>
+</ul>
+<p><em>A brief overview of the steps required (more detail below):</em></p>
+<ol class="arabic">
+<li><p>Define a list of <code class="docutils literal notranslate"><span class="pre">RouteDay</span></code> objects. The first item in the list should be the name of the ending e.g. <code class="docutils literal notranslate"><span class="pre">&quot;Good</span> <span class="pre">End&quot;&quot;</span></code>.</p></li>
+<li><p>The first parameter of the RouteDay object is the name of the day e.g. “1st”. The second is a list of timeline items. Possible timeline items are:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>ChatRoom(“title”, “label”, “trigger_time”, [participants])</p></li>
+<li><p>StoryMode(“title”, “label”, “trigger_time”, associated_character)</p></li>
+<li><p>StoryCall(“title”, “label”, “trigger_time”, caller)</p></li>
+<li><p>TheParty(“label”, “trigger_time”)</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">Route</span></code> object and fill in the information for your new route.</p></li>
+<li><p>Customize the route select screen to include a button to your new route.</p></li>
+<li><p>Create a short introduction for your new route.</p></li>
+<li><p>Select <strong>Start Over</strong> from the settings to test out your new route.</p></li>
+</ol>
+</div>
+<p>To set up a route and test out your own chatrooms, story mode, phone calls and more in the game, first you need to define a few special variables. The first is a list of <code class="docutils literal notranslate"><span class="pre">RouteDay</span></code> objects. Each <code class="docutils literal notranslate"><span class="pre">RouteDay</span></code> contains the information the program needs to know for one in-game day.</p>
+<p>First, go to <code class="docutils literal notranslate"><span class="pre">route_setup.rpy</span></code>, where you’ll see an example definition called <code class="docutils literal notranslate"><span class="pre">tutorial_good_end</span></code>.</p>
+<p>At its most basic level, your definition will look as follows:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">default</span> <span class="n">my_route_good_end</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;Good End&quot;</span><span class="p">,</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s2">&quot;1st&quot;</span><span class="p">),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s2">&quot;2nd&quot;</span><span class="p">),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s2">&quot;3rd&quot;</span><span class="p">),</span>
+    <span class="c1"># (...)</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s2">&quot;Final&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>The first item in the list should be a string with the name of the ending as it will appear in the History log. In this example, it is <code class="docutils literal notranslate"><span class="pre">&quot;Good</span> <span class="pre">End&quot;</span></code>.</p>
+<p>The remaining items in the list are <code class="docutils literal notranslate"><span class="pre">RouteDay</span></code> objects. They have the following fields:</p>
+<dl>
+<dt><cite>day</cite></dt><dd><p>A string containing the name of the day as it should appear in the timeline.</p>
+<p>e.g. “1st”</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A RouteDay with the day field as “Final” will have a special icon above it in the timeline screen.</p>
+</div>
+</dd>
+<dt><cite>archive_list</cite></dt><dd><p>Optional, although empty days have no content. A list of timeline items. See below for more.</p>
+<p>e.g. [ChatRoom(“Example Chatroom”, “example_chat”, “00:01”)]</p>
+</dd>
+<dt><cite>day_icon</cite></dt><dd><p>Optional. A string with the name of the icon to use for this day in the timeline. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;day_common2&quot;</span></code>. Existing images can be found in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code> under the header <strong>DAY SELECT IMAGES</strong>.</p>
+<p>e.g. “day_ju”</p>
+</dd>
+<dt><cite>branch_vn</cite></dt><dd><p>Optional. If this day has a Story Mode that should be shown as soon as it’s merged onto the main route after a plot branch, then it will be stored here.</p>
+<p>e.g. BranchStoryMode(‘jaehee_bre2_vn’, who=ja)</p>
+</dd>
+<dt><cite>save_img</cite></dt><dd><p>Optional. The file path or short form to the save image which should be used for all timeline items on this RouteDay. Existing images can be found in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code> under the header <strong>SAVE &amp; LOAD IMAGES</strong>.</p>
+<p>e.g. “zen”</p>
+</dd>
+<dt><cite>auto_label</cite></dt><dd><p>Optional. A string which is used as the pattern to automatically name all item labels inside this RouteDay’s <code class="docutils literal notranslate"><span class="pre">archive_list</span></code>. Each item in <code class="docutils literal notranslate"><span class="pre">archive_list</span></code> with None as its label will be given a label with this prefix + a number in increasing order.</p>
+<p>e.g. ‘<a href="#id1"><span class="problematic" id="id2">casual_d3_</span></a>’</p>
+</dd>
+<dt><cite>exclude_suffix</cite></dt><dd><p>Optional. A boolean value that controls whether the ” Day” suffix is added to the end of the day name on the timeline screen. The default behaviour is to append ” Day” to the end of the title given in the <code class="docutils literal notranslate"><span class="pre">day</span></code> field, so “1st” appears as “1st Day” on the timeline screen. If <code class="docutils literal notranslate"><span class="pre">exclude_suffix</span></code> is True, however, then ” Day” will not be appended to the name of the day so it would appear simply as “1st”.</p>
+<p>e.g. True</p>
+</dd>
+</dl>
+<div class="section" id="adding-timeline-items">
+<h2>Adding Timeline Items<a class="headerlink" href="#adding-timeline-items" title="Permalink to this headline">¶</a></h2>
+<p>The main way you will add content to your route is by filling out a RouteDay’s <code class="docutils literal notranslate"><span class="pre">archive_list</span></code>. There are four main timeline items.</p>
+<div class="section" id="chatrooms">
+<span id="route-chatrooms"></span><h3>Chatrooms<a class="headerlink" href="#chatrooms" title="Permalink to this headline">¶</a></h3>
+<p>To add a Chatroom, you will use the <code class="docutils literal notranslate"><span class="pre">ChatRoom</span></code> class. It contains all the information the program needs for a single chatroom along with any accompanying phone calls or a story mode section, if applicable. You will need one <code class="docutils literal notranslate"><span class="pre">ChatRoom</span></code> object for each chatroom in your route.</p>
+<p>A typical chatroom definition looks like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">ChatRoom</span><span class="p">(</span><span class="s2">&quot;Fight over cats&quot;</span><span class="p">,</span> <span class="s1">&#39;casual_d2_example_4&#39;</span><span class="p">,</span> <span class="s1">&#39;08:05&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ja</span><span class="p">,</span> <span class="n">ju</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>For this example, the title of the chatroom is “Fight over cats”. It can be found at the label <code class="docutils literal notranslate"><span class="pre">casual_d2_example_4</span></code> and will appear at 8:05 am. The characters <code class="docutils literal notranslate"><span class="pre">ja</span></code> and <code class="docutils literal notranslate"><span class="pre">ju</span></code> begin in the chatroom.</p>
+<p>There are some additional fields as well, each of which is explained below.</p>
+<dl>
+<dt><cite>title</cite></dt><dd><p>The title of the chatroom as it should appear in the timeline. A string.</p>
+<p>e.g. “Yoosung’s omelette rice”</p>
+</dd>
+<dt><cite>chatroom_label</cite></dt><dd><p>The name of the label the program will jump to in order to play this chatroom. You must define this label yourself. It should be passed to this field as a string.</p>
+<p>e.g. “casual_d2_example_3”</p>
+</dd>
+<dt><cite>trigger_time</cite></dt><dd><p>The time this chatroom should appear at. This should be written in military time with leading zeroes, so a time like 1:00 AM becomes “01:00” and 1:38 PM becomes “13:38”.</p>
+<p>e.g. “23:42”</p>
+</dd>
+<dt><cite>participants</cite></dt><dd><p>Optional. A list of the characters who begin in this chatroom. If this field is ommitted, no one begins in the chatroom. This should be a list of ChatCharacter objects.</p>
+<p>e.g. [ja, ju]</p>
+</dd>
+<dt><cite>story_mode</cite></dt><dd><p>Optional. Allows you finer control over the StoryMode object associated with this chatroom. The program will automatically try to find appropriately labelled story mode labels and create its own StoryMode object for this field.</p>
+<p>e.g. StoryMode(“”, “my_vn_label”)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is generally recommended that you let the program take care of defining StoryMode objects attached to chatrooms by using properly named labels. See <a class="reference internal" href="#attached-story-mode"><span class="std std-ref">Attached Story Mode</span></a>.</p>
+</div>
+</dd>
+<dt><cite>plot_branch</cite></dt><dd><p>Optional. Indicates that there should be a plot branch after this chatroom. See <a class="reference internal" href="plot-branches.html#plot-branches"><span class="std std-ref">Plot Branches</span></a> for more on plot branches.</p>
+<p>e.g. PlotBranch(True)</p>
+</dd>
+<dt><cite>save_img</cite></dt><dd><p>Optional. A string with the name of the save image to use for this particular chatroom. This takes precedent over a save image set by the RouteDay. It is typically an image indicating which route the player is on. The prefix <code class="docutils literal notranslate"><span class="pre">&quot;save_&quot;</span></code> is automatically added to this field.</p>
+<p>e.g. “casual”</p>
+</dd>
+<dt><cite>box_bg</cite></dt><dd><p>Optional. If you want the chatroom’s timeline image box to have one of the special backgrounds, you’ll specify which one – either “colorhack” or “secure”. “secure” displays a gear image beneath the title and participant pictures, and “colorhack” displays several coloured squares. If omitted, the regular box background is used.</p>
+<p>e.g. “colorhack”</p>
+</dd>
+</dl>
+<p>Chatrooms also have “expired” versions. This means that if the player is playing real-time mode and doesn’t play this chatroom before the next timeline item appears, it will “expire”. The program will look for the expired version of a chatroom under the chatroom’s regular label + the suffix <code class="docutils literal notranslate"><span class="pre">_expired</span></code>. So, if the chatroom is found at</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">day_4_5_coffee_chat</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Then the expired label should be located at</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">day_4_5_coffee_chat_expired</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Typically, an expired chatroom covers most of the same topics as the original chatroom, though the player is not present. For more on expired chatrooms and real-time mode, see <a class="reference internal" href="#expired-timeline-items-and-real-time-mode"><span class="std std-ref">Expired Timeline Items and Real-Time Mode</span></a>.</p>
+<div class="section" id="attached-story-mode">
+<h4>Attached Story Mode<a class="headerlink" href="#attached-story-mode" title="Permalink to this headline">¶</a></h4>
+<p>Chatrooms can have an attached Story Mode, which becomes available to play after the chatroom has been played. The easiest way to do this is to create a label which follows a specific naming scheme. This will automatically define a StoryMode object for the associated chatroom.</p>
+<p>If your chatroom’s label is <code class="docutils literal notranslate"><span class="pre">casual_day_1_4`</span></code>, then if you create a label called <code class="docutils literal notranslate"><span class="pre">casual_day_1_4_vn</span></code> (note the <code class="docutils literal notranslate"><span class="pre">_vn</span></code> suffix), a general StoryMode will be created that will lead to that label.</p>
+<p>You can also specify which character should appear on the Story Mode icon in the timeline screen by adding their file_id to the end of the label e.g. <code class="docutils literal notranslate"><span class="pre">casual_day_1_4_vn_ja</span></code> would create a Story Mode attached to the chatroom found at <code class="docutils literal notranslate"><span class="pre">casual_day_1_4</span></code> which will show Jaehee’s image on the icon. Most of the existing characters have an associated Story Mode icon defined for them. You can also define one for a new character: see <a class="reference internal" href="creating-characters.html#story-mode-timeline-images"><span class="std std-ref">Story Mode Timeline Images</span></a> for more.</p>
+<p>An attached Story Mode is written the same way as other story mode sections. See <a class="reference internal" href="story-mode.html#writing-a-story-mode"><span class="std std-ref">Writing a Story Mode</span></a> for more.</p>
+</div>
+</div>
+<div class="section" id="story-mode">
+<span id="route-story-mode"></span><h3>Story Mode<a class="headerlink" href="#story-mode" title="Permalink to this headline">¶</a></h3>
+<p>To add a <strong>standalone</strong> Story Mode section, you will use the <code class="docutils literal notranslate"><span class="pre">StoryMode</span></code> class. It contains all the information the program needs for a single story mode along with any accompanying phone calls, if applicable. You will need one <code class="docutils literal notranslate"><span class="pre">StoryMode</span></code> object for each standalone story mode in your route.</p>
+<p>A Story Mode definition looks like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">StoryMode</span><span class="p">(</span><span class="s2">&quot;Gone to the store&quot;</span><span class="p">,</span> <span class="s2">&quot;extra_day_5_3&quot;</span><span class="p">,</span> <span class="s2">&quot;20:16&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">save_img</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">plot_branch</span><span class="o">=</span><span class="n">PlotBranch</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>For this example, the title of the Story Mode is “Gone to the store”. It can be found at the label <code class="docutils literal notranslate"><span class="pre">extra_day_5_3</span></code> and will appear at 8:16 pm. The story mode icon in the timeline will show Yoosung’s story mode image, and if the player saves the game while this is the most recent timeline item, it will show a save icon associated with “y”. Additionally, there is a plot branch after this Story Mode. For more on Plot Branches, see <a class="reference internal" href="plot-branches.html#plot-branches"><span class="std std-ref">Plot Branches</span></a>.</p>
+<p>There are some additional fields as well, each of which is explained below.</p>
+<dl>
+<dt><cite>title</cite></dt><dd><p>The title of the story mode as it should appear in the timeline. A string.</p>
+<p>e.g. “Things that matter”</p>
+</dd>
+<dt><cite>vn_label</cite></dt><dd><p>The name of the label the program will jump to in order to play this story mode. You must define this label yourself. It should be passed to this field as a string.</p>
+<p>e.g. “casual_d2_example_3”</p>
+</dd>
+<dt><cite>trigger_time</cite></dt><dd><p>The time this story mode should appear at. This should be written in military time with leading zeroes, so a time like 1:00 AM becomes “01:00” and 1:38 PM becomes “13:38”.</p>
+<p>e.g. “03:42”</p>
+</dd>
+<dt><cite>who</cite></dt><dd><p>Optional. The ChatCharacter this story mode should be associated with. Leaving this out causes the story mode to use a “general” story mode icon on the timeline screen.</p>
+<p>e.g. ja</p>
+</dd>
+<dt><cite>plot_branch</cite></dt><dd><p>Optional. Indicates that there should be a plot branch after this story mode. See <a class="reference internal" href="plot-branches.html#plot-branches"><span class="std std-ref">Plot Branches</span></a> for more on plot branches.</p>
+<p>e.g. PlotBranch(False)</p>
+</dd>
+<dt><cite>party</cite></dt><dd><p>True if this Story Mode is the party. In general, you should instead use <code class="docutils literal notranslate"><span class="pre">TheParty</span></code> to define the party for your route. See <a class="reference internal" href="#the-party"><span class="std std-ref">The Party</span></a>.</p>
+<p>e.g. False</p>
+</dd>
+<dt><cite>save_img</cite></dt><dd><p>Optional. A string with the name of the save image to use for this particular story mode. This takes precedent over a save image set by the RouteDay. It is typically an image indicating which route the player is on. The prefix <code class="docutils literal notranslate"><span class="pre">&quot;save_&quot;</span></code> is automatically added to this field.</p>
+<p>e.g. “s”</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="story-calls">
+<span id="route-story-calls"></span><h3>Story Calls<a class="headerlink" href="#story-calls" title="Permalink to this headline">¶</a></h3>
+<p>To add a <strong>standalone</strong> Story Call, you will use the <code class="docutils literal notranslate"><span class="pre">StoryCall</span></code> class. It contains all the information the program needs for a single story call along with any accompanying regular phone calls, if applicable. You will need one <code class="docutils literal notranslate"><span class="pre">StoryCall</span></code> object for each standalone story call in your route.</p>
+<p>A Story Call definition looks like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">StoryCall</span><span class="p">(</span><span class="s2">&quot;Did you hear?&quot;</span><span class="p">,</span> <span class="s2">&quot;new_years_3&quot;</span><span class="p">,</span> <span class="s2">&quot;16:10&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For this example, the title of the Story Call is “Did you hear?”. It can be found at the label <code class="docutils literal notranslate"><span class="pre">new_years_3</span></code> and will appear at 4:10 pm. The person calling the player is <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<p>There are some additional fields as well, each of which is explained below.</p>
+<dl>
+<dt><cite>title</cite></dt><dd><p>The title of the story call as it should appear in the timeline. A string.</p>
+<p>e.g. “Good morning!”</p>
+</dd>
+<dt><cite>phone_label</cite></dt><dd><p>The name of the label the program will jump to in order to play this story call. You must define this label yourself. It should be passed to this field as a string.</p>
+<p>e.g. “new_years_3”</p>
+</dd>
+<dt><cite>trigger_time</cite></dt><dd><p>The time this story call should appear at. This should be written in military time with leading zeroes, so a time like 1:00 AM becomes “01:00” and 1:38 PM becomes “13:38”.</p>
+<p>e.g. “11:11”</p>
+</dd>
+<dt><cite>caller</cite></dt><dd><p>The ChatCharacter object of the character who will be calling the player.</p>
+<p>e.g. r</p>
+</dd>
+<dt><cite>plot_branch</cite></dt><dd><p>Optional. Indicates that there should be a plot branch after this story call. See <a class="reference internal" href="plot-branches.html#plot-branches"><span class="std std-ref">Plot Branches</span></a> for more on plot branches.</p>
+<p>e.g. PlotBranch(False)</p>
+</dd>
+<dt><cite>save_img</cite></dt><dd><p>Optional. A string with the name of the save image to use for this particular story call. This takes precedent over a save image set by the RouteDay. It is typically an image indicating which route the player is on. The prefix <code class="docutils literal notranslate"><span class="pre">&quot;save_&quot;</span></code> is automatically added to this field.</p>
+<p>e.g. “ju”</p>
+</dd>
+</dl>
+<p>Story calls, like chatrooms, also have “expired” versions. This means that if the player is playing real-time mode and doesn’t play this story call before the next timeline item appears, it will “expire”. The program will look for the expired version of a story call under the story call’s regular label + the suffix <code class="docutils literal notranslate"><span class="pre">_expired</span></code>. So, if the story call is found at</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">my_first_story_call</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Then the expired label should be located at</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">my_first_story_call_expired</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Typically, an expired story call is treated as though the caller phoned the player and left a voicemail. For more on expired story calls and real-time mode, see <a class="reference internal" href="#expired-timeline-items-and-real-time-mode"><span class="std std-ref">Expired Timeline Items and Real-Time Mode</span></a>.</p>
+</div>
+<div class="section" id="the-party">
+<h3>The Party<a class="headerlink" href="#the-party" title="Permalink to this headline">¶</a></h3>
+<p>There is a special convenience function intended to help you define a standalone party for a route. It has the following fields:</p>
+<dl>
+<dt><cite>vn_label</cite></dt><dd><p>The label the program should jump to to play the party.</p>
+<p>e.g. “emma_route_party”</p>
+</dd>
+<dt><cite>trigger_time</cite></dt><dd><p>The time the party should appear at. This should be written in military time with leading zeroes, so a time like 1:00 AM becomes “01:00” and 1:38 PM becomes “13:38”.</p>
+<p>e.g. “12:00”</p>
+</dd>
+<dt><cite>save_img</cite></dt><dd><p>Optional. A string with the name of the save image to use when this is the most recent timeline item. This takes precedent over a save image set by the RouteDay. It is typically an image indicating which route the player is on. The prefix <code class="docutils literal notranslate"><span class="pre">&quot;save_&quot;</span></code> is automatically added to this field.</p>
+<p>e.g. “em”</p>
+</dd>
+</dl>
+<p>An example may look like:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">TheParty</span><span class="p">(</span><span class="s2">&quot;emma_route_normal_party&quot;</span><span class="p">,</span> <span class="s2">&quot;12:00&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-route-day">
+<h3>Example Route Day<a class="headerlink" href="#example-route-day" title="Permalink to this headline">¶</a></h3>
+<p>An example route day might look like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;1st&#39;</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Welcome!&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_1&#39;</span><span class="p">,</span> <span class="s1">&#39;00:01&#39;</span><span class="p">),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Relaxing&#39;</span><span class="p">,</span><span class="s1">&#39;day_1_emma_2&#39;</span><span class="p">,</span> <span class="s1">&#39;06:11&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">z</span><span class="p">,</span> <span class="n">em</span><span class="p">]),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;How are you doing?&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_3&#39;</span><span class="p">,</span> <span class="s1">&#39;09:53&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">r</span><span class="p">]),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Something strange...&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_4&#39;</span><span class="p">,</span> <span class="s1">&#39;11:28&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">s</span><span class="p">]),</span>
+    <span class="n">StoryMode</span><span class="p">(</span><span class="s1">&#39;Do you...?&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_5&#39;</span><span class="p">,</span> <span class="s1">&#39;15:05&#39;</span><span class="p">,</span> <span class="n">em</span><span class="p">),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Kimchi Sandwich&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_6&#39;</span><span class="p">,</span> <span class="s1">&#39;18:25&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">em</span><span class="p">,</span> <span class="n">ja</span><span class="p">]),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Very mysterious&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_7&#39;</span><span class="p">,</span> <span class="s1">&#39;20:41&#39;</span><span class="p">),</span>
+    <span class="n">StoryCall</span><span class="p">(</span><span class="s1">&#39;Will you visit?&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_8&#39;</span><span class="p">,</span> <span class="s1">&#39;22:44&#39;</span><span class="p">,</span> <span class="n">em</span><span class="p">,</span>
+        <span class="n">plot_branch</span><span class="o">=</span><span class="n">PlotBranch</span><span class="p">(</span><span class="kc">True</span><span class="p">)),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s2">&quot;Happily Ever After&quot;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_9&#39;</span><span class="p">,</span> <span class="s1">&#39;23:26&#39;</span><span class="p">)</span>
+    <span class="p">],</span> <span class="n">save_img</span><span class="o">=</span><span class="s2">&quot;em&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A list of RouteDays like this make up a single path on a route:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">default</span> <span class="n">emma_good_end</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Good End&quot;</span><span class="p">,</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;1st&#39;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Welcome!&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_1&#39;</span><span class="p">,</span> <span class="s1">&#39;00:01&#39;</span><span class="p">),</span>
+        <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Relaxing&#39;</span><span class="p">,</span><span class="s1">&#39;day_1_emma_2&#39;</span><span class="p">,</span> <span class="s1">&#39;06:11&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">z</span><span class="p">,</span> <span class="n">em</span><span class="p">]),</span>
+        <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;How are you doing?&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_3&#39;</span><span class="p">,</span> <span class="s1">&#39;09:53&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">r</span><span class="p">]),</span>
+        <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Something strange...&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_4&#39;</span><span class="p">,</span> <span class="s1">&#39;11:28&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">s</span><span class="p">]),</span>
+        <span class="n">StoryMode</span><span class="p">(</span><span class="s1">&#39;Do you...?&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_5&#39;</span><span class="p">,</span> <span class="s1">&#39;15:05&#39;</span><span class="p">,</span> <span class="n">em</span><span class="p">),</span>
+        <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Kimchi Sandwich&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_6&#39;</span><span class="p">,</span> <span class="s1">&#39;18:25&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">em</span><span class="p">,</span> <span class="n">ja</span><span class="p">]),</span>
+        <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Very mysterious&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_7&#39;</span><span class="p">,</span> <span class="s1">&#39;20:41&#39;</span><span class="p">),</span>
+        <span class="n">StoryCall</span><span class="p">(</span><span class="s1">&#39;Will you visit?&#39;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_8&#39;</span><span class="p">,</span> <span class="s1">&#39;22:44&#39;</span><span class="p">,</span> <span class="n">em</span><span class="p">,</span>
+            <span class="n">plot_branch</span><span class="o">=</span><span class="n">PlotBranch</span><span class="p">(</span><span class="kc">True</span><span class="p">)),</span>
+        <span class="n">ChatRoom</span><span class="p">(</span><span class="s2">&quot;Happily Ever After&quot;</span><span class="p">,</span> <span class="s1">&#39;day_1_emma_9&#39;</span><span class="p">,</span> <span class="s1">&#39;23:26&#39;</span><span class="p">)</span>
+        <span class="p">],</span> <span class="n">save_img</span><span class="o">=</span><span class="s2">&quot;em&quot;</span><span class="p">),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;2nd&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)]),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;3rd&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)]),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;4th&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)]),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;5th&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)]),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;6th&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)]),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;7th&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)]),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;8th&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)]),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;9th&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)]),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;10th&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)]),</span>
+    <span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;Final&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="o">...</span><span class="p">)])]</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">[ChatRoom(...)]</span></code> is shorthand for a list of many more timeline items.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The above RouteDay example could also be simplified as:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">RouteDay</span><span class="p">(</span><span class="s1">&#39;1st&#39;</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Welcome!&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;00:01&#39;</span><span class="p">),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Relaxing&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;06:11&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">z</span><span class="p">,</span> <span class="n">em</span><span class="p">]),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;How are you doing?&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;09:53&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">r</span><span class="p">]),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Something strange...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;11:28&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">s</span><span class="p">]),</span>
+    <span class="n">StoryMode</span><span class="p">(</span><span class="s1">&#39;Do you...?&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;15:05&#39;</span><span class="p">,</span> <span class="n">em</span><span class="p">),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Kimchi Sandwich&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;18:25&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">em</span><span class="p">,</span> <span class="n">ja</span><span class="p">]),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Very mysterious&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;20:41&#39;</span><span class="p">),</span>
+    <span class="n">StoryCall</span><span class="p">(</span><span class="s1">&#39;Will you visit?&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;22:44&#39;</span><span class="p">,</span> <span class="n">em</span><span class="p">,</span> <span class="n">plot_branch</span><span class="o">=</span><span class="n">PlotBranch</span><span class="p">(</span><span class="kc">True</span><span class="p">)),</span>
+    <span class="n">ChatRoom</span><span class="p">(</span><span class="s2">&quot;Happily Ever After&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;23:26&#39;</span><span class="p">)</span>
+    <span class="p">],</span> <span class="n">save_img</span><span class="o">=</span><span class="s2">&quot;em&quot;</span><span class="p">,</span> <span class="n">auto_label</span><span class="o">=</span><span class="s2">&quot;day_1_emma_&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note the use of <code class="docutils literal notranslate"><span class="pre">None</span></code> instead of a label name, and <code class="docutils literal notranslate"><span class="pre">auto_label=&quot;day_1_emma_&quot;</span></code> on the RouteDay itself. This will automatically name all the labels inside the RouteDay to be equivalent to the previous example.</p>
+</div>
+</div>
+</div>
+<div class="section" id="setting-up-the-route">
+<h2>Setting up the Route<a class="headerlink" href="#setting-up-the-route" title="Permalink to this headline">¶</a></h2>
+<p>Now you should have at least one definition of a route path with a list of RouteDay objects. In order for the route to show up in the History screen and be playable, you also need to define a <code class="docutils literal notranslate"><span class="pre">Route</span></code> object. Do this after you have defined lists of RouteDay objects for each branching path on your route.</p>
+<p>An example Route may look like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">default</span> <span class="n">new_years_route</span> <span class="o">=</span> <span class="n">Route</span><span class="p">(</span>
+    <span class="n">default_branch</span><span class="o">=</span><span class="n">new_years_normal_end</span><span class="p">,</span>
+    <span class="n">branch_list</span><span class="o">=</span><span class="p">[</span><span class="n">new_years_ju</span><span class="p">,</span> <span class="n">new_years_ja</span><span class="p">,</span>
+        <span class="n">new_years_s</span><span class="p">,</span> <span class="n">new_years_y</span><span class="p">,</span> <span class="n">new_years_z</span><span class="p">],</span>
+    <span class="n">route_history_title</span><span class="o">=</span><span class="s2">&quot;New Year&#39;s&quot;</span><span class="p">,</span>
+    <span class="n">history_background</span><span class="o">=</span><span class="s2">&quot;Menu Screens/Main Menu/new_years_route_bg.webp&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>This defines a special New Year’s Eve Route with endings for five of the characters, as well as a normal ending. Each of the fields is explained below.</p>
+<dl>
+<dt><cite>default_branch</cite></dt><dd><p>The “default” path for this route to take. This should generally be the longest path from start to finish, and isn’t necessarily the “good” end. It will be the path the player begins on when they start a new game on this route.</p>
+<p>e.g. <code class="docutils literal notranslate"><span class="pre">emma_good_end</span></code></p>
+</dd>
+<dt><cite>branch_list</cite></dt><dd><p>A list of all the other paths this route can branch onto after a plot branch. These are the variables that hold the RouteDay lists you defined earlier. Typically this includes all the bad, normal, and bad relationship ends, etc. This may also be <code class="docutils literal notranslate"><span class="pre">None</span></code> if the route does not branch.</p>
+<p>e.g. <code class="docutils literal notranslate"><span class="pre">[emma_bad_end_1,</span> <span class="pre">emma_bad_end_2,</span> <span class="pre">emma_normal_end]</span></code></p>
+</dd>
+<dt><cite>route_history_title</cite></dt><dd><p>The name of this route as it should appear in the History screen e.g. “Emma Route” or “Common Route”. The suffix ” Route” is automatically appended to this title.</p>
+<p>e.g. “Emma”</p>
+</dd>
+<dt><cite>has_end_title</cite></dt><dd><p>True if this route should have a title labelling the ending type over the last timeline item in the History. If the variable you used for <code class="docutils literal notranslate"><span class="pre">default_branch</span></code> begins with a title like “Good End” (e.g. <code class="docutils literal notranslate"><span class="pre">emma_good_end</span> <span class="pre">=</span> <span class="pre">[&quot;Good</span> <span class="pre">End&quot;,</span> <span class="pre">RouteDay(&quot;1st&quot;,</span> <span class="pre">[...])]</span></code>, then if <code class="docutils literal notranslate"><span class="pre">has_end_title</span></code> is True, “Good End” will appear just before the last item on <code class="docutils literal notranslate"><span class="pre">emma_good_end</span></code>.</p>
+<p>If you don’t set this to True/False yourself, the program will automatically set it to True if there is a <code class="docutils literal notranslate"><span class="pre">branch_list</span></code> and False otherwise. An example of a time when this variable should be False even with branching paths is seen in <code class="docutils literal notranslate"><span class="pre">route_example.rpy</span></code> for Casual Route – there is no “Casual Route Good End”, since successfully completing Casual Route means the player has branched onto a character route. However, there <em>is</em> a Casual Route Bad End inside the Route’s branch_list.</p>
+<p>e.g. True</p>
+</dd>
+<dt><cite>history_background</cite></dt><dd><p>Optional. The path to the image that should be used for this route’s background in the History screen. This should be 650x120 px for best results. The corners are automatically cropped to fit the button frame.</p>
+<p>e.g. “Menu Screens/Main Menu/jaehee-route-bg.webp”</p>
+</dd>
+</dl>
+<p>Both <code class="docutils literal notranslate"><span class="pre">route_setup.rpy</span></code> and <code class="docutils literal notranslate"><span class="pre">route_example.rpy</span></code> have definitions of Routes and their associated branching paths so you can get an idea of how routes are defined.</p>
+</div>
+<div class="section" id="expired-timeline-items-and-real-time-mode">
+<h2>Expired Timeline Items and Real-Time Mode<a class="headerlink" href="#expired-timeline-items-and-real-time-mode" title="Permalink to this headline">¶</a></h2>
+<p>In this program, you can switch between two different play styles: real-time, and sequential. Sequential is currently the default. You can toggle real-time from the <strong>Developer</strong> settings button in the chat home screen or on the main menu.</p>
+<p>In sequential mode, timeline items unlock sequentially. In other words, once you finish a timeline item like a chatroom, the next one will automatically unlock. Chatrooms and story calls don’t expire unless you back out of them (aka hitting the Back arrow while in an active chatroom or hanging up in the middle of a story call), and you can proceed through the story regardless of what the current real-life time is.</p>
+<p>In real-time mode, timeline items unlock based on the current time. You also have the option to buy the next 24 hours’ worth of timeline items in advance. If an old chatroom or story call has not been viewed before a new one unlocks it will expire, and you will miss any incoming calls that were triggered to occur after the now-expired item (though you can usually call the characters back).</p>
+<p>Each chatroom and story call you create should have both a “regular” version and an “expired” version. The expired version is the version the player will play through if the item has expired and they have not bought it back. Generally this means the player will not have the opportunity to participate in the chatroom or make choices, and expired story calls function as though the caller left the player a voice message.</p>
+<p>To create an expired timeline item, simply take the name of the regular item’s label and add <cite>_expired</cite>. So, if your chatroom has the label</p>
+<p><code class="docutils literal notranslate"><span class="pre">`renpy</span>
+<span class="pre">label</span> <span class="pre">mychat:</span>
+<span class="pre">`</span></code></p>
+<p>then the expired chatroom should have the label</p>
+<p><code class="docutils literal notranslate"><span class="pre">`renpy</span>
+<span class="pre">label</span> <span class="pre">mychat_expired:</span>
+<span class="pre">`</span></code></p>
+<p>The rest can be filled out as any other chatroom.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Story Mode sections, standalone or attached, do not expire even in real-time mode. However, if its time has already passed, any associated text messages <em>will</em> be delivered and associated phone calls will either be missed or require the player to call the character back. The difference is that there is no expired version of story mode sections; they will always play out the same way.</p>
+</div>
+<div class="section" id="changing-content-if-expired">
+<h3>Changing Content If Expired<a class="headerlink" href="#changing-content-if-expired" title="Permalink to this headline">¶</a></h3>
+<p>Besides the <code class="docutils literal notranslate"><span class="pre">_expired</span></code>-style labels for story calls and chatrooms, there is also a special variable called <code class="docutils literal notranslate"><span class="pre">was_expired</span></code> which can be used to modify content depending on whether the associated timeline item was expired or not. For example, in the <code class="docutils literal notranslate"><span class="pre">after_</span></code> label for a chatroom, you can check if the player missed the chat or not and change the resulting content accordingly:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">after_my_chatroom</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">was_expired</span><span class="p">:</span>
+        <span class="c1"># The player played the chatroom after it expired and missed it</span>
+        <span class="n">compose</span> <span class="k">text</span> <span class="n">s</span><span class="p">:</span>
+            <span class="n">s</span> <span class="s2">&quot;[name]...&quot;</span>
+            <span class="n">s</span> <span class="s2">&quot;I missed u in the chat lol&quot;</span>
+            <span class="n">s</span> <span class="s2">&quot;What were you up to?&quot;</span>
+            <span class="k">label</span> <span class="n">my_chatroom_s_text_msg</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">compose</span> <span class="k">text</span> <span class="n">s</span><span class="p">:</span>
+            <span class="n">s</span> <span class="s2">&quot;lolol ur so funny in the chatrooms [name] lolol&quot;</span>
+            <span class="n">s</span> <span class="s2">&quot;u should come by more often~&quot;</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+<p>If the player did not play through the <code class="docutils literal notranslate"><span class="pre">my_chatroom</span></code> label, 707 will send the first set of text messages. If the player <em>did</em> play this chatroom, however, they will instead see the second set of text messages.</p>
+<p>You can see an example of this in <code class="docutils literal notranslate"><span class="pre">tutorial_11_story_call.rpy</span></code>.</p>
+</div>
+<div class="section" id="backing-out-vs-real-time-expiry">
+<h3>Backing out vs. real-time expiry<a class="headerlink" href="#backing-out-vs-real-time-expiry" title="Permalink to this headline">¶</a></h3>
+<p>There are two different ways for timeline items to expire: first, items expire if you are playing in real-time and miss playing an item before the next one triggers. Second, items expire if you use the back arrow during a chatroom you haven’t seen before or if you hang up in the middle of a story call.</p>
+<p>In the first case (expiry due to real-time mode being active), the following will happen:</p>
+<ul class="simple">
+<li><p>You will receive a missed call from any character who was going to call you after the expired item. You can call that character back to receive that conversation.</p></li>
+<li><p>Any text messages that would have been delivered after the item will be automatically delivered to your inbox</p></li>
+<li><p>Any outgoing calls that were to be made available after the item will be made available</p></li>
+</ul>
+<p>Note that phone calls will “time out” two timeline items after they were set to appear. So, for example, say you have three chatrooms: A, B, and C. Emma is supposed to call you after chatroom A. If chatroom B becomes available before you’ve seen chatroom A, then chatroom A will expire and you will receive a missed phone call from Emma. You can call Emma back to receive this phone call up until chatroom C becomes available, at which point that phone call will become unavailable and you won’t be able to call Emma back to get that conversation anymore.</p>
+<p>In the second case, where the player backs out of an active chatroom or hangs up in the middle of a story call and causes it to expire, the following will happen:</p>
+<ul class="simple">
+<li><p>Any incoming calls that would have been triggered after the item are instead turned into outgoing calls, <strong>though the player receives no missed call notification</strong></p></li>
+<li><p>Any text messages that would have been delivered after the item will be automatically delivered to your inbox</p></li>
+<li><p>Any outgoing calls that were to be made available after the item will be made available</p></li>
+</ul>
+<p>As you can see, the only real difference is in the first point. Incoming phone conversations will still be available, but you will not receive a missed call notification for it.</p>
+</div>
+</div>
+<div class="section" id="ending-a-route">
+<h2>Ending a Route<a class="headerlink" href="#ending-a-route" title="Permalink to this headline">¶</a></h2>
+<p>When the player has reached the end of the route, you need to tell the program which ending screen to show them by setting the <code class="docutils literal notranslate"><span class="pre">ending</span></code> variable. The built-in options are “bad”, “normal”, and “good” e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="s2">&quot;This is the end of the route.&quot;</span>
+<span class="n">exit</span> <span class="n">chatroom</span> <span class="n">u</span>
+<span class="k">$</span> <span class="n">ending</span> <span class="o">=</span> <span class="s2">&quot;normal&quot;</span>
+<span class="k">return</span>
+</pre></div>
+</div>
+<p>By setting <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ending</span> <span class="pre">=</span> <span class="pre">&quot;normal&quot;</span></code>, the program knows that when this timeline item ends, the route is over. The player will be shown the Save &amp; Exit screen (if applicable) and then the ending image will be shown.</p>
+<p>You can also use your own image for the end of the route by passing <code class="docutils literal notranslate"><span class="pre">ending</span></code> the full image path or the name of a defined image e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">image</span> <span class="n">my_custom_ending</span> <span class="o">=</span> <span class="s2">&quot;Endings/my_custom_ending.webp&quot;</span>
+
+<span class="k">label</span> <span class="n">end_of_my_route</span><span class="p">():</span>
+    <span class="k">scene</span> <span class="n">hack</span>
+    <span class="k">show</span> <span class="n">hack</span> <span class="n">effect</span>
+    <span class="n">enter</span> <span class="n">chatroom</span> <span class="n">u</span>
+    <span class="n">u</span> <span class="s2">&quot;This is the end of the route.&quot;</span>
+    <span class="n">exit</span> <span class="n">chatroom</span> <span class="n">u</span>
+    <span class="k">$</span> <span class="n">ending</span> <span class="o">=</span> <span class="s2">&quot;my_custom_ending&quot;</span>
+    <span class="c1"># $ ending = &quot;Endings/my_custom_ending.webp&quot; also works</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+<p>The program will show the desired image before taking the player back to the main menu. If they click “Original Story”, they will be prompted to select a route for a new game.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The end of a route is also a good place to set any persistent variables if you’re keeping track of a player’s route completion to unlock routes/images/extras later.</p>
+</div>
+</div>
+<div class="section" id="customizing-the-route-select-screen">
+<h2>Customizing the Route Select Screen<a class="headerlink" href="#customizing-the-route-select-screen" title="Permalink to this headline">¶</a></h2>
+<p>Now that you have your route defined, you can customize the route select screen to include a button to your new route. You will need to create a label for your introduction as well. This can be called whatever you like e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">new_years_introduction</span><span class="p">:</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Even if you don’t want an introduction and just want to take the player directly to the home screen, you <strong>must still</strong> create an introduction label. This label includes important instructions to set up the route properly.</p>
+</div>
+<p>See <a class="reference internal" href="#creating-an-introduction"><span class="std std-ref">Creating an Introduction</span></a> for more information on how to write your introduction and set up the route. The important part here is the name of the label, which will be used for the button on the route select screen.</p>
+<p>Mysterious Messenger has a special screen called <code class="docutils literal notranslate"><span class="pre">custom_route_select_screen</span></code>, found inside the file <code class="docutils literal notranslate"><span class="pre">screens_custom_route_select.rpy</span></code>. Inside the <strong>Developer</strong> settings found on the main menu on on the home screen after loading a game, there is an option called <strong>Use custom route select screen</strong>. Checking this option will cause the game to use the <code class="docutils literal notranslate"><span class="pre">custom_route_select_screen</span></code> instead of the default version (which contains buttons for Tutorial Day and Casual Story).</p>
+<p>Your custom route select screen should look like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="n">custom_route_select_screen</span><span class="p">():</span>
+    <span class="k">vbox</span><span class="p">:</span>
+        <span class="na">style_prefix</span> <span class="s1">&#39;route_select&#39;</span> <span class="c1"># Remove this if you want your own styles</span>
+        <span class="k">button</span><span class="p">:</span>
+            <span class="na">ysize</span> <span class="mi">210</span> <span class="c1"># Set the height of the button</span>
+            <span class="c1"># The image that goes on the left of the button</span>
+            <span class="k">add</span> <span class="s1">&#39;Menu Screens/Main Menu/route_select_tutorial.webp&#39;</span><span class="p">:</span>
+                <span class="na">align</span> <span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+            <span class="na">action</span> <span class="n">Start</span><span class="p">()</span>
+            <span class="c1"># The box with text on the right side of the button</span>
+            <span class="k">frame</span><span class="p">:</span>
+                <span class="k">text</span> <span class="s2">&quot;Tutorial Day&quot;</span>
+</pre></div>
+</div>
+<p>You’re free to replace the image “Menu Screens/Main Menu/route_select_tutorial.webp” with your own image or leave it out altogether. The important thing is the action on the button, currently <code class="docutils literal notranslate"><span class="pre">Start()</span></code>. You need to give this the name of the label where it can find your route introduction:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="n">custom_route_select_screen</span><span class="p">():</span>
+    <span class="k">vbox</span><span class="p">:</span>
+        <span class="na">style_prefix</span> <span class="s1">&#39;route_select&#39;</span> <span class="c1"># Remove this if you want your own styles</span>
+        <span class="k">button</span><span class="p">:</span>
+            <span class="na">ysize</span> <span class="mi">200</span> <span class="c1"># Set the height of the button</span>
+            <span class="na">action</span> <span class="n">Start</span><span class="p">(</span><span class="s1">&#39;new_years_introduction&#39;</span><span class="p">)</span>
+            <span class="c1"># The box with text on the right side of the button</span>
+            <span class="k">frame</span><span class="p">:</span>
+                <span class="k">text</span> <span class="s2">&quot;New Year&#39;s Story&quot;</span>
+</pre></div>
+</div>
+<p>Note that the action is now <code class="docutils literal notranslate"><span class="pre">Start('new_years_introduction')</span></code>, which will start the game at the label <code class="docutils literal notranslate"><span class="pre">new_years_introduction</span></code>.</p>
+<div class="section" id="providing-multiple-routes">
+<h3>Providing Multiple Routes<a class="headerlink" href="#providing-multiple-routes" title="Permalink to this headline">¶</a></h3>
+<p>If you want to provide multiple routes the player can begin on, you will need a button for each route on the route select screen. By default, the buttons on the route select screen are organized inside something called a <code class="docutils literal notranslate"><span class="pre">vbox</span></code>, which will stack its contents on top of each other vertically. This makes it easy to create multiple buttons.</p>
+<p>For example, a version of the route select screen which allows the player to choose between a “Casual” or “Deep” story might look like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="n">custom_route_select_screen</span><span class="p">():</span>
+    <span class="k">vbox</span><span class="p">:</span>
+        <span class="na">style_prefix</span> <span class="s1">&#39;route_select&#39;</span>
+        <span class="k">button</span><span class="p">:</span>
+            <span class="na">ysize</span> <span class="mi">210</span>
+            <span class="k">add</span> <span class="s1">&#39;Menu Screens/Main Menu/route_select_casual.webp&#39;</span><span class="p">:</span>
+                <span class="na">align</span> <span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+            <span class="na">action</span> <span class="n">Start</span><span class="p">(</span><span class="s1">&#39;casual_story_start&#39;</span><span class="p">)</span>
+            <span class="k">frame</span><span class="p">:</span>
+                <span class="k">text</span> <span class="s2">&quot;Casual Story&quot;</span>
+        <span class="k">button</span><span class="p">:</span>
+            <span class="na">ysize</span> <span class="mi">210</span>
+            <span class="k">add</span> <span class="s1">&#39;Menu Screens/Main Menu/route_select_deep.webp&#39;</span><span class="p">:</span>
+                <span class="na">align</span> <span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+            <span class="na">action</span> <span class="n">Start</span><span class="p">(</span><span class="s1">&#39;deep_story_start&#39;</span><span class="p">)</span>
+            <span class="k">frame</span><span class="p">:</span>
+                <span class="k">text</span> <span class="s2">&quot;Deep Story&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The image ‘Menu Screens/Main Menu/route_select_deep.webp’ does not currently exist in the game; you would need to create it yourself.</p>
+</div>
+<p>You’re free to change the button backgrounds, text, spacing, and other styles. The above example provides two buttons. The first takes the player to a label called <code class="docutils literal notranslate"><span class="pre">casual_story_start</span></code>, and the second to a label called <code class="docutils literal notranslate"><span class="pre">deep_story_start</span></code>.</p>
+</div>
+<div class="section" id="unlockable-routes">
+<h3>Unlockable Routes<a class="headerlink" href="#unlockable-routes" title="Permalink to this headline">¶</a></h3>
+<p>If you want to keep certain routes “locked” until the player has fulfilled a condition of your choosing (e.g. preventing the player from going through Character B’s route until after they have completed Character A’s route), you need to set up persistent variables to keep track of whether the player has fulfilled your desired condition or not. You can define these variables anywhere you like, though it’s a good idea to keep them in a separate <code class="docutils literal notranslate"><span class="pre">.rpy</span></code> file for organization. Since this variable affects the route select screen, you could put it in <code class="docutils literal notranslate"><span class="pre">screens_custom_route_select.rpy</span></code>.</p>
+<p>For this example, the program will check whether or not the player has successfully gotten the Good End in Tutorial Day. First, define a variable:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">default</span> <span class="n">persistent</span><span class="o">.</span><span class="n">tutorial_good_end_complete</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">tutorial_good_end_complete</span></code> is the name of your created field in the <code class="docutils literal notranslate"><span class="pre">persistent</span></code> object. <code class="docutils literal notranslate"><span class="pre">persistent</span></code> is a special class in Ren’Py that is saved across playthroughs. The above statement first initializes this variable to <code class="docutils literal notranslate"><span class="pre">False</span></code>, and you will set it to <code class="docutils literal notranslate"><span class="pre">True</span></code> after the player has successfully gone through the Good End.</p>
+<p>The final label that a player will see if they achieved the good end on Tutorial Day is called <code class="docutils literal notranslate"><span class="pre">label</span> <span class="pre">tutorial_good_end_party</span></code> and can be found in <code class="docutils literal notranslate"><span class="pre">tutorial_8_plot_branches.rpy</span></code>. The last lines of that label are currently as follows:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">ending</span> <span class="o">=</span> <span class="s1">&#39;good&#39;</span>
+<span class="k">return</span>
+</pre></div>
+</div>
+<p>This ends the route and takes the player back to the menu, so just before the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement you can set your new persistent variable to <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">persistent</span><span class="o">.</span><span class="n">tutorial_good_end_complete</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">$</span> <span class="n">ending</span> <span class="o">=</span> <span class="s1">&#39;good&#39;</span>
+<span class="k">return</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’re not limited to putting your variable check right at the end of a route – you can also put a variable like <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">persistent.confessed_to_emma</span> <span class="pre">=</span> <span class="pre">True</span></code>, which might happen in the middle of a route and unlock a special Valentine’s Day event or something else. Remember that <code class="docutils literal notranslate"><span class="pre">persistent</span></code> variables <em>persist</em> across multiple playthroughs, so they’re best used for events you only want to unlock once.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you <em>don’t</em> need the program to remember a variable across different playthroughs (for example, if you want the game to remember you told Emma “I own a cat” so you can later have her mention the cat in a different conversation), you <strong>do  not</strong> need <code class="docutils literal notranslate"><span class="pre">persistent</span></code> in front of your variable definition and can simply use a variable like:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">default</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">label</span> <span class="n">emma_route_3_8</span><span class="p">:</span>
+    <span class="k">scene</span> <span class="n">morning</span>
+    <span class="k">play</span> <span class="k">music</span> <span class="n">mystic_chat</span>
+    <span class="n">em</span> <span class="s2">&quot;Hi, [name]!&quot;</span>
+    <span class="n">em</span> <span class="s2">&quot;I had a question -- do you own a cat?&quot;</span>
+    <span class="k">menu</span><span class="p">:</span>
+        <span class="s2">&quot;Yes, I have a cat.&quot;</span><span class="p">:</span>
+            <span class="k">$</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">em</span> <span class="s2">&quot;Cool!&quot;</span>
+        <span class="s2">&quot;No, I don&#39;t.&quot;</span><span class="p">:</span>
+            <span class="k">$</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">em</span> <span class="s2">&quot;Aw, okay.&quot;</span>
+</pre></div>
+</div>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">owns_cat</span></code> will be set to False whenever the player begins a new game.</p>
+</div>
+<p>Now you can customize the route select screen based on the value of your persistent variable:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">vbox</span><span class="p">:</span>
+    <span class="na">style_prefix</span> <span class="s1">&#39;route_select&#39;</span>
+    <span class="k">button</span><span class="p">:</span>
+        <span class="na">ysize</span> <span class="mi">210</span>
+        <span class="k">add</span> <span class="s1">&#39;Menu Screens/Main Menu/route_select_tutorial.webp&#39;</span><span class="p">:</span>
+            <span class="na">align</span> <span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="na">action</span> <span class="n">Start</span><span class="p">()</span>
+        <span class="k">frame</span><span class="p">:</span>
+            <span class="k">text</span> <span class="s2">&quot;Tutorial Day&quot;</span>
+    <span class="c1"># Casual/Jaehee&#39;s route is only available to a player who</span>
+    <span class="c1"># has completed the Good End on Tutorial Day</span>
+    <span class="k">button</span><span class="p">:</span>
+        <span class="k">add</span> <span class="s1">&#39;Menu Screens/Main Menu/route_select_casual.webp&#39;</span><span class="p">:</span>
+            <span class="na">align</span> <span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="k">frame</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">persistent</span><span class="o">.</span><span class="n">tutorial_good_end_complete</span><span class="p">:</span>
+                <span class="k">text</span> <span class="s2">&quot;Casual Story&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">hbox</span><span class="p">:</span>
+                    <span class="na">align</span> <span class="p">(</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+                    <span class="k">add</span> <span class="s1">&#39;plot_lock&#39;</span> <span class="na">align</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+                    <span class="k">text</span> <span class="s2">&quot;Casual Story&quot;</span>
+        <span class="k">if</span> <span class="n">persistent</span><span class="o">.</span><span class="n">tutorial_good_end_complete</span><span class="p">:</span>
+            <span class="na">action</span> <span class="n">Start</span><span class="p">(</span><span class="s1">&#39;example_casual_start&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="na">action</span> <span class="n">CConfirm</span><span class="p">(</span><span class="s2">&quot;This route is locked until you&#39;ve &quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;played the Good End on Tutorial Day&quot;</span><span class="p">)</span>
+            <span class="na">hover_foreground</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<p>There are a lot of parts here, so each will be explained separately.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">vbox</span><span class="p">:</span>
+    <span class="na">style_prefix</span> <span class="s1">&#39;route_select&#39;</span>
+    <span class="k">button</span><span class="p">:</span>
+        <span class="na">ysize</span> <span class="mi">210</span>
+        <span class="k">add</span> <span class="s1">&#39;Menu Screens/Main Menu/route_select_tutorial.webp&#39;</span><span class="p">:</span>
+            <span class="na">align</span> <span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="na">action</span> <span class="n">Start</span><span class="p">()</span>
+        <span class="k">frame</span><span class="p">:</span>
+            <span class="k">text</span> <span class="s2">&quot;Tutorial Day&quot;</span>
+</pre></div>
+</div>
+<p>This part contains a button for Tutorial Day. There are no conditions on it, so it is always available to the player.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># Casual/Jaehee&#39;s route is only available to a player who</span>
+<span class="c1"># has completed the Good End on Tutorial Day</span>
+<span class="k">button</span><span class="p">:</span>
+    <span class="k">add</span> <span class="s1">&#39;Menu Screens/Main Menu/route_select_casual.webp&#39;</span><span class="p">:</span>
+        <span class="na">align</span> <span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="k">frame</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">persistent</span><span class="o">.</span><span class="n">tutorial_good_end_complete</span><span class="p">:</span>
+            <span class="k">text</span> <span class="s2">&quot;Casual Story&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">hbox</span><span class="p">:</span>
+                <span class="na">align</span> <span class="p">(</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+                <span class="k">add</span> <span class="s1">&#39;plot_lock&#39;</span> <span class="na">align</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+                <span class="k">text</span> <span class="s2">&quot;Casual Story&quot;</span>
+</pre></div>
+</div>
+<p>This makes a button for Casual Story. However, there is a conditional – <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">persistent.tutorial_good_end_complete</span></code>, the variable defined earlier. If this variable is True – aka the player has seen the Good End on Tutorial Day – then the button just contains the text “Casual Story”. However, if it is false, there is an <code class="docutils literal notranslate"><span class="pre">hbox</span></code>, which organizes its items side-by-side. This hbox shows a “locked” image next to the text “Casual Story” to indicate that Casual Story is currently locked.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">persistent</span><span class="o">.</span><span class="n">tutorial_good_end_complete</span><span class="p">:</span>
+    <span class="na">action</span> <span class="n">Start</span><span class="p">(</span><span class="s1">&#39;example_casual_start&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="na">action</span> <span class="n">CConfirm</span><span class="p">(</span><span class="s2">&quot;This route is locked until you&#39;ve &quot;</span>
+        <span class="o">+</span> <span class="s2">&quot;played the Good End on Tutorial Day&quot;</span><span class="p">)</span>
+    <span class="na">hover_foreground</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<p>Finally, if the player hasn’t gone through the Good End on Tutorial Day, they shouldn’t be able to play Casual Story yet, so there is another conditional statement with the action inside it. If the player has seen the Good End, the game will start at the label <code class="docutils literal notranslate"><span class="pre">example_casual_start</span></code>.</p>
+<p>However, if the player <em>hasn’t</em> seen the Good End, the button will not light up (<code class="docutils literal notranslate"><span class="pre">hover_foreground</span> <span class="pre">None</span></code>), and the special action <code class="docutils literal notranslate"><span class="pre">CConfirm</span></code> is used. <code class="docutils literal notranslate"><span class="pre">CConfirm</span></code> shows a confirmation prompt to the user with the given message. In this case, it tells the player that they cannot access this route until they’ve played the Good End on Tutorial Day.</p>
+<p>You could leave the <code class="docutils literal notranslate"><span class="pre">else</span></code> out altogether, which would cause the button to be inactive if the player hasn’t played the Good End, but including it helps the player understand why they can’t play this route yet and what they have to do to unlock it.</p>
+</div>
+</div>
+<div class="section" id="creating-an-introduction">
+<h2>Creating an Introduction<a class="headerlink" href="#creating-an-introduction" title="Permalink to this headline">¶</a></h2>
+<p>Now that you have a button on the route select screen that leads to your new route, you may want to have an “introduction” to the route before the player is taken to the home screen. At the very least, your introduction label needs a few lines to finish setting up the route before it takes the player to the home screen.</p>
+<p>The introduction functions a bit differently from writing a regular chatroom/phone call/story mode/etc, so it’s recommended you have a good grasp of how to create regular timeline items before you work on a custom introduction.</p>
+<div class="section" id="essential-setup-functions">
+<h3>Essential Setup Functions<a class="headerlink" href="#essential-setup-functions" title="Permalink to this headline">¶</a></h3>
+<p>Everything for the introduction will go inside the label name you gave the <code class="docutils literal notranslate"><span class="pre">Start()</span></code> action. So, for the above examples on the page, the button on the route select screen had an action of <code class="docutils literal notranslate"><span class="pre">Start('example_casual_start')</span></code>, which means the label for the introduction is <code class="docutils literal notranslate"><span class="pre">example_casual_start</span></code>.</p>
+<p>For this example, the introduction to the New Year’s Route from the <a class="reference internal" href="plot-branches.html#plot-branches"><span class="std std-ref">Plot Branches</span></a> page will be created. Its definition is below:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">default</span> <span class="n">new_years_route</span> <span class="o">=</span> <span class="n">Route</span><span class="p">(</span>
+    <span class="n">default_branch</span><span class="o">=</span><span class="n">new_years_normal_end</span><span class="p">,</span>
+    <span class="n">branch_list</span><span class="o">=</span><span class="p">[</span><span class="n">new_years_ju</span><span class="p">,</span> <span class="n">new_years_ja</span><span class="p">,</span>
+        <span class="n">new_years_s</span><span class="p">,</span> <span class="n">new_years_y</span><span class="p">,</span> <span class="n">new_years_z</span><span class="p">],</span>
+    <span class="n">route_history_title</span><span class="o">=</span><span class="s2">&quot;New Year&#39;s&quot;</span><span class="p">,</span>
+    <span class="n">history_background</span><span class="o">=</span><span class="s2">&quot;Menu Screens/Main Menu/new_years_route_bg.webp&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Assume there is a button with the action <code class="docutils literal notranslate"><span class="pre">Start(&quot;new_years_intro&quot;)</span></code>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">new_years_intro</span><span class="p">():</span>
+
+    <span class="k">$</span> <span class="n">new_route_setup</span><span class="p">(</span><span class="n">route</span><span class="o">=</span><span class="n">new_years_route</span><span class="p">,</span> <span class="n">participants</span><span class="o">=</span><span class="p">[</span><span class="n">ja</span><span class="p">,</span> <span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">new_route_setup</span></code> tells the program which route to set up for the player. In this case, you are setting up the New Year’s Route, which was defined in the variable <code class="docutils literal notranslate"><span class="pre">new_years_route</span></code>. That variable is passed to <code class="docutils literal notranslate"><span class="pre">new_route_setup</span></code>.</p>
+<p>There is also a second parameter, <code class="docutils literal notranslate"><span class="pre">participants</span></code>. This is given a list of the characters who should start in the introductory chatroom. This is optional; if omitted, no one begins in the chatroom.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The introduction is assumed to be a chatroom unless otherwise indicated.</p>
+</div>
+<p>Next, you may want to adjust some of the variables for this route. For the New Year’s Route, only the characters <code class="docutils literal notranslate"><span class="pre">ja</span></code>, <code class="docutils literal notranslate"><span class="pre">ju</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code> should have profiles on the home screen and contacts in the phone’s contacts list. By default, <code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code>, and <code class="docutils literal notranslate"><span class="pre">ri</span></code> are included in the character list, so you will need to tell the program to not include them.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">new_years_intro</span><span class="p">():</span>
+
+    <span class="k">$</span> <span class="n">new_route_setup</span><span class="p">(</span><span class="n">route</span><span class="o">=</span><span class="n">new_years_route</span><span class="p">,</span> <span class="n">participants</span><span class="o">=</span><span class="p">[</span><span class="n">ja</span><span class="p">,</span> <span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
+    <span class="k">$</span> <span class="n">character_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">,</span> <span class="n">m</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This tells the program which characters are included on the home screen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you want to update the character list <em>after the game has already begun</em>, you should use the special function <code class="docutils literal notranslate"><span class="pre">update_character_list</span></code> to update it. That looks like this:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">update_character_list</span><span class="p">([</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">m</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This will ensure the game is updated to accommodate the new character.</p>
+</div>
+<p>Similarly, you may want to set which characters show up on the Profile screen with an indicator of their collected heart points. Since the New Year’s route only has endings for <code class="docutils literal notranslate"><span class="pre">ja</span></code>, <code class="docutils literal notranslate"><span class="pre">ju</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code>, you should set up the <code class="docutils literal notranslate"><span class="pre">heart_point_chars</span></code> list to reflect this:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">new_years_intro</span><span class="p">():</span>
+
+    <span class="k">$</span> <span class="n">new_route_setup</span><span class="p">(</span><span class="n">route</span><span class="o">=</span><span class="n">new_years_route</span><span class="p">,</span> <span class="n">participants</span><span class="o">=</span><span class="p">[</span><span class="n">ja</span><span class="p">,</span> <span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
+    <span class="k">$</span> <span class="n">character_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">,</span> <span class="n">m</span><span class="p">]</span>
+    <span class="k">$</span> <span class="n">heart_point_chars</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Like the <code class="docutils literal notranslate"><span class="pre">character_list</span></code>, by default <code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code>, and <code class="docutils literal notranslate"><span class="pre">ri</span></code> are normally included in this list, so you will need to specify if the list should include or exclude some of these characters.</p>
+<p>Next, you should decide whether this route will include paraphrased choices or not. For more information, see <a class="reference internal" href="miscellaneous.html#paraphrased-choices"><span class="std std-ref">Paraphrased Choices</span></a>. You will set this up here in the introduction label:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">new_years_intro</span><span class="p">():</span>
+
+    <span class="k">$</span> <span class="n">new_route_setup</span><span class="p">(</span><span class="n">route</span><span class="o">=</span><span class="n">new_years_route</span><span class="p">,</span> <span class="n">participants</span><span class="o">=</span><span class="p">[</span><span class="n">ja</span><span class="p">,</span> <span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
+    <span class="k">$</span> <span class="n">character_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">,</span> <span class="n">m</span><span class="p">]</span>
+    <span class="k">$</span> <span class="n">heart_point_chars</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">]</span>
+    <span class="k">$</span> <span class="n">paraphrase_choices</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>This should be <code class="docutils literal notranslate"><span class="pre">False</span></code> if you want the main character to directly say the dialogue in the choices, and <code class="docutils literal notranslate"><span class="pre">True</span></code> if you want to always type out what dialogue should be said after a choice.</p>
+<p>Finally, you may want to set up a particular profile picture callback function for the main character. See <a class="reference internal" href="miscellaneous.html#profile-picture-callbacks"><span class="std std-ref">Profile Picture Callbacks</span></a> for more information. If so, set the variable <code class="docutils literal notranslate"><span class="pre">mc_pfp_callback</span></code> to the name of your callback function:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">new_years_intro</span><span class="p">():</span>
+
+    <span class="k">$</span> <span class="n">new_route_setup</span><span class="p">(</span><span class="n">route</span><span class="o">=</span><span class="n">new_years_route</span><span class="p">,</span> <span class="n">participants</span><span class="o">=</span><span class="p">[</span><span class="n">ja</span><span class="p">,</span> <span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
+    <span class="k">$</span> <span class="n">character_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">,</span> <span class="n">m</span><span class="p">]</span>
+    <span class="k">$</span> <span class="n">heart_point_chars</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">]</span>
+    <span class="k">$</span> <span class="n">paraphrase_choices</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">$</span> <span class="n">mc_pfp_callback</span> <span class="o">=</span> <span class="n">bonus_pfp_dialogue</span>
+</pre></div>
+</div>
+<p>Now that the main variables for your introduction are set up, you can begin writing the actual introduction or jump directly to the home screen without further ado.</p>
+<p>If your introduction is a chatroom, you can set up the background with a <code class="docutils literal notranslate"><span class="pre">scene</span></code> statement and write the chatroom as normal, including heart icons, choice menus, and more. The introduction should end with a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement. If you would like to include a phone call or story mode section in your introduction, this is handled differently (see below).</p>
+</div>
+<div class="section" id="leaving-out-the-introduction">
+<h3>Leaving out the Introduction<a class="headerlink" href="#leaving-out-the-introduction" title="Permalink to this headline">¶</a></h3>
+<p>While you <em>must</em> include the line <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">new_route_setup(route=your_route)</span></code> where <code class="docutils literal notranslate"><span class="pre">your_route</span></code> is replaced with the variable name of your actual route, you do not actually need an introduction in order to begin your route. Simply include the line <code class="docutils literal notranslate"><span class="pre">jump</span> <span class="pre">skip_intro_setup</span></code> at the end of your introduction label:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">new_years_intro</span><span class="p">():</span>
+
+    <span class="k">$</span> <span class="n">new_route_setup</span><span class="p">(</span><span class="n">route</span><span class="o">=</span><span class="n">new_years_route</span><span class="p">,</span> <span class="n">participants</span><span class="o">=</span><span class="p">[</span><span class="n">ja</span><span class="p">,</span> <span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
+    <span class="k">$</span> <span class="n">character_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">,</span> <span class="n">m</span><span class="p">]</span>
+    <span class="k">$</span> <span class="n">heart_point_chars</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">]</span>
+    <span class="k">$</span> <span class="n">paraphrase_choices</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">$</span> <span class="n">mc_pfp_callback</span> <span class="o">=</span> <span class="n">bonus_pfp_dialogue</span>
+
+    <span class="k">jump</span> <span class="n">skip_intro_setup</span>
+</pre></div>
+</div>
+<p>This will set up the necessary variables and then jump immediately to the home screen to begin the route.</p>
+</div>
+<div class="section" id="additional-introduction-features">
+<h3>Additional Introduction Features<a class="headerlink" href="#additional-introduction-features" title="Permalink to this headline">¶</a></h3>
+<p>For the introduction of your route, you may want to include a combination of features such as phone calls, chatrooms, and story mode. In order to switch between these features, you must use special calls and functions to set up the screens properly.</p>
+<div class="section" id="including-an-incoming-call">
+<h4>Including an Incoming Call<a class="headerlink" href="#including-an-incoming-call" title="Permalink to this headline">¶</a></h4>
+<p>To include an incoming call, use the line:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">call</span> <span class="n">new_incoming_call</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">u</span></code> is the ChatCharacter variable of the character who is phoning the player. This will cause that character to phone the player. The player is unable to “miss” this call and must answer it to proceed. You can then write the phone dialogue as you normally would.</p>
+<p>If you would then like to switch from the phone call to a chatroom or story mode, you must include special calls to set up the appropriate variables.</p>
+</div>
+<div class="section" id="including-a-story-mode">
+<h4>Including a Story Mode<a class="headerlink" href="#including-a-story-mode" title="Permalink to this headline">¶</a></h4>
+<p>If you would like to begin with a story mode section, or switch to story mode after a phone call, you must use the line:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">call</span> <span class="n">vn_begin</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>to set up the appropriate variables. You can then write dialogue and show character portraits the way you normally would during a story mode section.</p>
+<p>If you’d like to switch to story mode in the middle of a chatroom, see instead <a class="reference internal" href="story-mode.html#including-a-story-mode-during-a-chatroom"><span class="std std-ref">Including a Story Mode During a Chatroom</span></a>.</p>
+</div>
+<div class="section" id="including-a-chatroom-with-other-features">
+<h4>Including a Chatroom with Other Features<a class="headerlink" href="#including-a-chatroom-with-other-features" title="Permalink to this headline">¶</a></h4>
+<p>If you begin your introduction with a phone call or a story mode and want to return to and/or end on a chatroom, you must include the line:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">call</span> <span class="n">chat_begin</span><span class="p">(</span><span class="s1">&#39;morning&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>to set up the appropriate chatroom variables. <code class="docutils literal notranslate"><span class="pre">'morning'</span></code> should be the name of the background you are setting up.</p>
+</div>
+</div>
+<div class="section" id="introduction-example">
+<h3>Introduction Example<a class="headerlink" href="#introduction-example" title="Permalink to this headline">¶</a></h3>
+<p>For example, an introduction which combines several elements into one introduction may look as follows:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">my_new_route_intro</span><span class="p">():</span>
+
+    <span class="k">$</span> <span class="n">new_route_setup</span><span class="p">(</span><span class="n">route</span><span class="o">=</span><span class="n">my_new_route</span><span class="p">)</span>
+    <span class="k">$</span> <span class="n">character_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">,</span> <span class="n">m</span><span class="p">]</span>
+    <span class="k">$</span> <span class="n">heart_point_chars</span> <span class="o">=</span> <span class="p">[</span><span class="n">ju</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ja</span><span class="p">]</span>
+
+    <span class="c1"># First, this should begin with a Story Mode section</span>
+    <span class="k">call</span> <span class="n">vn_begin</span><span class="p">()</span>
+    <span class="k">scene</span> <span class="n">bg</span> <span class="n">hallway</span> <span class="k">with</span> <span class="n">fade</span>
+    <span class="k">pause</span>
+    <span class="s2">&quot;(My phone is ringing)&quot;</span>
+    <span class="k">menu</span> <span class="p">(</span><span class="n">paraphrased</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">extend</span> <span class="s1">&#39;&#39;</span>
+        <span class="s2">&quot;Answer it.&quot;</span><span class="p">:</span>
+            <span class="k">call</span> <span class="n">new_incoming_call</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+        <span class="s2">&quot;Ignore it.&quot;</span><span class="p">:</span>
+            <span class="s2">&quot;(The phone goes silent)&quot;</span>
+            <span class="k">show</span> <span class="n">saeran</span> <span class="n">mask</span>
+            <span class="n">u</span> <span class="s2">&quot;Oh? You&#39;re not going to answer that?&quot;</span>
+            <span class="n">u</span> <span class="s2">&quot;Hmm, that&#39;s too bad.&quot;</span>
+            <span class="n">u</span> <span class="n">happy</span> <span class="s2">&quot;Well, nothing to be had for it. You need to come with me.&quot;</span>
+            <span class="c1"># This will end the route with the &#39;Bad Ending&#39; screen</span>
+            <span class="k">$</span> <span class="n">ending</span> <span class="o">=</span> <span class="s1">&#39;bad&#39;</span>
+            <span class="k">return</span>
+
+    <span class="c1"># This is now the beginning of the phone call</span>
+    <span class="n">u</span> <span class="s2">&quot;Haha, I can&#39;t believe you picked up.&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;Um, I need you to do a favour for me. Can you do that?&quot;</span>
+
+    <span class="k">menu</span><span class="p">:</span>
+        <span class="n">extend</span> <span class="s1">&#39;&#39;</span>
+        <span class="s2">&quot;Sure, I guess.&quot;</span><span class="p">:</span>
+            <span class="n">u</span> <span class="s2">&quot;Great! That&#39;s so great. Alright, I&#39;ll send you some instructions over the messenger.&quot;</span>
+            <span class="n">u</span> <span class="s2">&quot;Don&#39;t worry if you see some flashy effects or anything.&quot;</span>
+            <span class="n">u</span> <span class="s2">&quot;That just means you&#39;re getting access.&quot;</span>
+
+    <span class="c1"># Show a chatroom</span>
+    <span class="k">call</span> <span class="n">chat_begin</span><span class="p">(</span><span class="s1">&#39;hack&#39;</span><span class="p">)</span>
+    <span class="k">show</span> <span class="n">hack</span> <span class="n">effect</span>
+    <span class="k">scene</span> <span class="n">hack</span>
+    <span class="n">enter</span> <span class="n">chatroom</span> <span class="n">u</span>
+    <span class="n">u</span> <span class="s2">&quot;Hello~&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;Thanks for coming.&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;I need a favour from you, like I said in the phone call.&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;You&#39;re in an apartment hallway, right?&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;There&#39;s a door there that says </span><span class="se">\&quot;</span><span class="s2">RFA</span><span class="se">\&quot;</span><span class="s2"> on the handle.&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;Type in the password 58439. Okay? It should open.&quot;</span>
+
+    <span class="c1"># Jump to story mode during the chatroom</span>
+    <span class="k">call</span> <span class="n">vn_during_chat</span><span class="p">(</span><span class="s2">&quot;unlock_apt_door&quot;</span><span class="p">)</span>
+    <span class="c1"># Returned to the chatroom</span>
+    <span class="n">m</span> <span class="s2">&quot;It&#39;s open.&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;Yay!&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;All right, see you soon~&quot;</span>
+    <span class="k">return</span>
+
+<span class="c1"># This is the label the program jumps to for the story mode</span>
+<span class="c1"># that is in the middle of a chatroom for the introduction.</span>
+<span class="k">label</span> <span class="n">unlock_apt_door</span><span class="p">():</span>
+    <span class="k">scene</span> <span class="n">bg</span> <span class="n">hallway</span> <span class="k">with</span> <span class="n">fade</span>
+    <span class="k">pause</span>
+    <span class="k">menu</span> <span class="p">(</span><span class="n">paraphrased</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="s2">&quot;(Approach the door)&quot;</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">scene</span> <span class="n">bg</span> <span class="n">rika_door_closed</span> <span class="k">with</span> <span class="n">fade</span>
+    <span class="k">pause</span>
+    <span class="k">menu</span> <span class="p">(</span><span class="n">paraphrased</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="s2">&quot;(Type in the password)&quot;</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">scene</span> <span class="n">bg</span> <span class="n">rika_door_open</span> <span class="k">with</span> <span class="n">dissolve</span>
+    <span class="k">pause</span>
+    <span class="k">return</span> <span class="c1"># Takes the player back to the chatroom</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="plot-branches.html" class="btn btn-neutral float-right" title="Plot Branches" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="emails.html" class="btn btn-neutral float-left" title="Emails" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Shawna P.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

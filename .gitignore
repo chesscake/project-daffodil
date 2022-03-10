@@ -1,0 +1,26 @@
+*.rpyc
+Drop Your Profile Picture Here/
+new_route/
+cache/
+saves/
+fonts/
+gui/
+tl/
+sfx/
+Music/
+voice files/
+images/
+errors.txt
+1-Update-list.md
+zz_experiments.rpy
+log.txt
+project.json
+traceback.txt
+.android.json
+_config.yml
+game/create_a_chatroom.rpy
+game/z_route_test.rpy
+persistent-char-problem.txt
+game/notifications_mobile.rpy
+game/01_mysme_engine/notifications_mobile.rpy
+file_picker.exe

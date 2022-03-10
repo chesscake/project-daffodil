@@ -1,0 +1,1670 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Chatrooms &mdash; Mysterious Messenger Wiki v3.2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Phone Calls" href="phone-calls.html" />
+    <link rel="prev" title="Git Setup" href="git-setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Mysterious Messenger Wiki
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Home.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Full Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits-and-acknowledgements.html">Credits and Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beginners-guide.html">Beginner’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-setup.html">Git Setup</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Chatrooms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-chatroom">Creating a Chatroom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-chatroom-dialogue">Writing Chatroom Dialogue</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-msg-cds">Using the msg CDS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fonts">Fonts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#emphasis">Emphasis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#underline">Underline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#special-bubbles">Special Bubbles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifying-message-speed">Modifying Message Speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-chatroom-spreadsheet">Using the Chatroom Spreadsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comparison-of-chatroom-dialogue">Comparison of Chatroom Dialogue</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-chatroom-features">Advanced Chatroom Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#entering-and-exiting-the-chatroom">Entering and Exiting the Chatroom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updating-the-characters-profiles">Updating the Characters’ Profiles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#updating-the-profile-picture">Updating the Profile Picture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-a-character-s-status">Updating a Character’s Status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-the-character-s-cover-photo">Updating the Character’s Cover Photo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#clearing-the-chat-history">Clearing the Chat History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clearing-chatroom-participants">Clearing Chatroom Participants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resetting-chatroom-participants">Resetting Chatroom Participants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#providing-choices">Providing Choices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-a-chatroom-banner">Showing a Chatroom Banner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-a-heart-icon">Showing a Heart Icon</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#awarding-a-heart-point">Awarding a heart point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#removing-a-heart-point">Removing a heart point</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#awarding-an-hourglass">Awarding an Hourglass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-the-hacked-scroll-effect">Showing the Hacked Scroll Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-the-secure-chatroom-animation">Showing the Secure Chatroom Animation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shaking-the-screen">Shaking the Screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-the-cracked-overlay">Showing the Cracked Overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sending-links">Sending Links</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#link-actions">Link Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stopping-the-chat">Stopping the Chat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-fonts-and-bubbles">Custom Fonts and Bubbles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#custom-fonts">Custom Fonts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-bubbles">Custom Bubbles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extending-custom-bubbles">Extending Custom Bubbles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#custom-bubble-background-function">Custom Bubble Background Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-bubble-style-function">Custom Bubble Style Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-bubble-offset-function">Custom Bubble Offset Function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-chatroom-backgrounds">Adding Chatroom Backgrounds</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-an-animated-background">Adding an Animated Background</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#timed-menus">Timed Menus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#timed-menu-settings">Timed Menu Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#timed-menu-functionality">Timed Menu Functionality</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#chatroom-creator">Chatroom Creator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-chat">Creating a New Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-dialogue-tab">The Dialogue Tab</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#undo-redo">Undo &amp; Redo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-effects-tab">The Effects Tab</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#emojis">Emojis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Special Bubbles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#screen-shake">Screen Shake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animations">Animations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-other-tab">The Other Tab</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-background">Select Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-music">Add Music</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-participants">Add Participants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#play-chat">Play Chat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-code">Generate Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-loading-chats">Saving &amp; Loading Chats</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-messages">Editing Messages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="phone-calls.html">Phone Calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-messages.html">Text Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="story-mode.html">Story Mode (VN)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emails.html">Emails</a></li>
+<li class="toctree-l1"><a class="reference internal" href="route-setup.html">Setting up a Route</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot-branches.html">Plot Branches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-characters.html">Creating Characters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cg-albums.html">CG Albums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mysterious Messenger Wiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Chatrooms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/chatrooms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chatrooms">
+<span id="chatrooms-topic"></span><h1>Chatrooms<a class="headerlink" href="#chatrooms" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Navigation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Chatrooms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-chatroom">Creating a Chatroom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-chatroom-dialogue">Writing Chatroom Dialogue</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-msg-cds">Using the msg CDS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fonts">Fonts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#emphasis">Emphasis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#underline">Underline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#special-bubbles">Special Bubbles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifying-message-speed">Modifying Message Speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-chatroom-spreadsheet">Using the Chatroom Spreadsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comparison-of-chatroom-dialogue">Comparison of Chatroom Dialogue</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-chatroom-features">Advanced Chatroom Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#entering-and-exiting-the-chatroom">Entering and Exiting the Chatroom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updating-the-characters-profiles">Updating the Characters’ Profiles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#updating-the-profile-picture">Updating the Profile Picture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-a-character-s-status">Updating a Character’s Status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-the-character-s-cover-photo">Updating the Character’s Cover Photo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#clearing-the-chat-history">Clearing the Chat History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clearing-chatroom-participants">Clearing Chatroom Participants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resetting-chatroom-participants">Resetting Chatroom Participants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#providing-choices">Providing Choices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-a-chatroom-banner">Showing a Chatroom Banner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-a-heart-icon">Showing a Heart Icon</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#awarding-a-heart-point">Awarding a heart point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#removing-a-heart-point">Removing a heart point</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#awarding-an-hourglass">Awarding an Hourglass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-the-hacked-scroll-effect">Showing the Hacked Scroll Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-the-secure-chatroom-animation">Showing the Secure Chatroom Animation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shaking-the-screen">Shaking the Screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-the-cracked-overlay">Showing the Cracked Overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sending-links">Sending Links</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#link-actions">Link Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stopping-the-chat">Stopping the Chat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-fonts-and-bubbles">Custom Fonts and Bubbles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#custom-fonts">Custom Fonts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-bubbles">Custom Bubbles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extending-custom-bubbles">Extending Custom Bubbles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#custom-bubble-background-function">Custom Bubble Background Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-bubble-style-function">Custom Bubble Style Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-bubble-offset-function">Custom Bubble Offset Function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-chatroom-backgrounds">Adding Chatroom Backgrounds</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-an-animated-background">Adding an Animated Background</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#timed-menus">Timed Menus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#timed-menu-settings">Timed Menu Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#timed-menu-functionality">Timed Menu Functionality</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#chatroom-creator">Chatroom Creator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-chat">Creating a New Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-dialogue-tab">The Dialogue Tab</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#undo-redo">Undo &amp; Redo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-effects-tab">The Effects Tab</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#emojis">Emojis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Special Bubbles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#screen-shake">Screen Shake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animations">Animations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-other-tab">The Other Tab</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-background">Select Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-music">Add Music</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-participants">Add Participants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#play-chat">Play Chat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-code">Generate Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-loading-chats">Saving &amp; Loading Chats</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-messages">Editing Messages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="creating-a-chatroom">
+<h2>Creating a Chatroom<a class="headerlink" href="#creating-a-chatroom" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The following section is for creating chatrooms using Ren’Py scripting and additions added for Mysterious Messenger. If you’re interested in the visual chatroom creator, see <a class="reference internal" href="#chatroom-creator"><span class="std std-ref">Chatroom Creator</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Example files to look at:</p>
+<ul class="simple">
+<li><p>tutorial_5_coffee.rpy</p></li>
+<li><p>tutorial_6_meeting.rpy</p></li>
+</ul>
+<p><em>A brief overview of the steps required (more detail below):</em></p>
+<ol class="arabic">
+<li><p>Create a new <code class="docutils literal notranslate"><span class="pre">.rpy</span></code> file (Optional, but recommended)</p></li>
+<li><p>Create a new label for the chatroom.</p></li>
+<li><p>(Optional) Set the background with <code class="docutils literal notranslate"><span class="pre">scene</span> <span class="pre">morning</span></code> where <code class="docutils literal notranslate"><span class="pre">morning</span></code> is replaced by whatever time of day/background you want to use.</p></li>
+<li><p>Add background music with <code class="docutils literal notranslate"><span class="pre">play</span> <span class="pre">music</span> <span class="pre">mystic_chat</span></code> where <code class="docutils literal notranslate"><span class="pre">mystic_chat</span></code> is replaced by the desired music variable.</p></li>
+<li><p>Write the chatroom dialogue.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>You may want to use either <code class="docutils literal notranslate"><span class="pre">Script</span> <span class="pre">Generator.xlsx</span></code> or the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>End the label with <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p></li>
+</ol>
+</div>
+<p>The first thing you should do when creating a new chatroom is create a new <code class="docutils literal notranslate"><span class="pre">.rpy</span></code> file and name it something descriptive so it’s easy to find it again. For example, you might name it something like <code class="docutils literal notranslate"><span class="pre">day_1_chatroom_3.rpy</span></code> or <code class="docutils literal notranslate"><span class="pre">day_1_3.rpy</span></code>. It’s a good idea to put all the files related to a particular route inside a folder for organization.</p>
+<p>In your newly created <code class="docutils literal notranslate"><span class="pre">.rpy</span></code> file, begin by making a label for the chatroom:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">day_1_1</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Don’t forget the colon after the label name. Your label name also can’t have any spaces in it or begin with a number.</p>
+<p>Next, it’s time to set up the chatroom background. Note that everything under the label name <strong>should be indented at least one level to the right</strong>. You can look at the example files mentioned above if you’re not sure what this means.</p>
+<p>New to v3.3.0 is the “autobackground” feature, where Mysterious Messenger will automatically set the background for a chatroom based on the time of day it should trigger at. If you don’t set a background, the automatic one will be used instead. If you want the program to set up the background for you, you can skip over this next section. Otherwise, you can manually set up the background like so:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">day_1_1</span><span class="p">:</span>
+    <span class="k">scene</span> <span class="n">morning</span>
+</pre></div>
+</div>
+<p>While chatrooms also use Ren’Py’s <code class="docutils literal notranslate"><span class="pre">scene</span></code> statement to show backgrounds, there is a limited number of built-in backgrounds to use. New backgrounds must be defined as described in <a class="reference internal" href="#adding-chatroom-backgrounds"><span class="std std-ref">Adding Chatroom Backgrounds</span></a>. Your background options are:</p>
+<ul class="simple">
+<li><p>morning</p></li>
+<li><p>noon</p></li>
+<li><p>evening</p></li>
+<li><p>night</p></li>
+<li><p>earlyMorn</p></li>
+<li><p>hack</p></li>
+<li><p>redhack</p></li>
+<li><p>redcrack</p></li>
+<li><p>secure</p></li>
+<li><p>rainy_day</p></li>
+<li><p>snowy_day</p></li>
+<li><p>morning_snow</p></li>
+</ul>
+<p>The background names <strong>are</strong> case-sensitive, so you need to get the capitalization correct. The program will automatically clear the chat history when beginning a new chatroom so new messages begin appearing at the bottom.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you’re using Mysterious Messenger’s autobackground feature to set up the background for you, but you need to change the background manually during a chatroom (e.g. to show the hacked background), if you want to change it back according to the time-of-day rules, you can use the special line:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">scene</span> <span class="n">autobackground</span>
+</pre></div>
+</div>
+<p>When this line is encountered, the program will automatically switch to whatever background should be used based on the time-of-day this chatroom triggers at.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The autobackground feature is based off of the <strong>trigger time</strong> of the chatroom where it is used, <strong>not</strong> what real-life time the player plays the chatroom at. So, for example, if the player buys back a chatroom that had expired, and that chatroom’s trigger time is 8:00am, whether it is 8:00am now or 10:00pm, autobackground will show the <code class="docutils literal notranslate"><span class="pre">morning</span></code> background to the player for that chatroom, since it was set to trigger at 8:00am and that’s within the range of the “morning” background time.</p>
+</div>
+<p>Now that the background is set up, you probably want some music. Music is played with the line:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">play</span> <span class="k">music</span> <span class="n">mystic_chat</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">mystic_chat</span></code> can be replaced by the name of whatever music you want. There are several files pre-defined in <code class="docutils literal notranslate"><span class="pre">variables_music_sound.rpy</span></code>. If you want to define your own music, you need to add it to the <code class="docutils literal notranslate"><span class="pre">music_dictionary</span></code> as well so that it is compatible with audio captions. See <a class="reference internal" href="miscellaneous.html#adding-new-audio"><span class="std std-ref">Adding New Audio</span></a> for more information.</p>
+<p>Next, you’ll write the dialogue for your chatroom. See <a class="reference internal" href="#writing-chatroom-dialogue"><span class="std std-ref">Writing Chatroom Dialogue</span></a>. Finally, to end the chatroom, end the label with <code class="docutils literal notranslate"><span class="pre">return</span></code>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">day_1_1</span><span class="p">:</span>
+    <span class="k">scene</span> <span class="n">earlyMorn</span>
+    <span class="k">play</span> <span class="k">music</span> <span class="n">mint_eye</span>
+    <span class="c1"># Dialogue will go here</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+<p>To learn how to make this chatroom appear in your game, check out <a class="reference internal" href="route-setup.html#setting-up-a-route"><span class="std std-ref">Setting up a Route</span></a>.</p>
+</div>
+<div class="section" id="writing-chatroom-dialogue">
+<h2>Writing Chatroom Dialogue<a class="headerlink" href="#writing-chatroom-dialogue" title="Permalink to this headline">¶</a></h2>
+<p>There are two primary ways of writing dialogue for your chatroom. The first is to use the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS, and the second is to use a special spreadsheet to help generate the dialogue for you.</p>
+<div class="section" id="using-the-msg-cds">
+<h3>Using the msg CDS<a class="headerlink" href="#using-the-msg-cds" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS helps add effects to your dialogue, such as special speech bubbles or alternative fonts, without sacrificing the readability of the dialogue. Dialogue written with the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS looks like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;Usually, the program would delay sending text messages and phone calls&quot;</span> <span class="n">sser1</span>
+<span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;until after both this chatroom and the Story Mode were played.&quot;</span> <span class="n">sser1</span>
+<span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;But since v3.0, things are more flexible!&quot;</span> <span class="n">flower_m</span>
+<span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;If you declare a route using the new format,&quot;</span>
+<span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;you can have text messages and phone calls and the like after any story item,&quot;</span>
+<span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;even a chatroom that has a Story Mode attached&quot;</span> <span class="n">glow</span>
+</pre></div>
+</div>
+<p>(Dialogue taken from <code class="docutils literal notranslate"><span class="pre">tutorial_3_text_message.rpy</span></code>)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS requires a speaker (in the example, <code class="docutils literal notranslate"><span class="pre">r</span></code>) and some dialogue (surrounded by <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>). There are several optional clauses that can be added after the dialogue to affect how it displays.</p>
+<div class="section" id="fonts">
+<h4>Fonts<a class="headerlink" href="#fonts" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS has several built-in fonts that can be applied to the text. These are:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Short form</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sser1</p></td>
+<td><p>Sans serif font 1 (Nanum Gothic)</p></td>
+</tr>
+<tr class="row-odd"><td><p>sser2</p></td>
+<td><p>Sans serif font 2 (Seoul Namsan)</p></td>
+</tr>
+<tr class="row-even"><td><p>ser1</p></td>
+<td><p>Serif font 1 (Nanum Myeongjo)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ser2</p></td>
+<td><p>Serif font 2 (Seoul Hangang)</p></td>
+</tr>
+<tr class="row-even"><td><p>curly</p></td>
+<td><p>Cursive font (Sandoll Misaeng)</p></td>
+</tr>
+<tr class="row-odd"><td><p>blocky</p></td>
+<td><p>Blocky font (BM-HANNA)</p></td>
+</tr>
+</tbody>
+</table>
+<p>You can also use your own fonts with the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS. See <a class="reference internal" href="#custom-fonts-and-bubbles"><span class="std std-ref">Custom Fonts and Bubbles</span></a> for more on custom fonts and special bubbles.</p>
+<p>In order to use one of the built-in fonts, just include the name of the desired font after the dialogue e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;This is example dialogue in the cursive font.&quot;</span> <span class="n">curly</span>
+<span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;This is in the sans serif 1 font.&quot;</span> <span class="n">sser1</span>
+</pre></div>
+</div>
+<p>Note that you can only have one font at a time; including more than one will simply use the last font given. The default font is <code class="docutils literal notranslate"><span class="pre">sser1</span></code>, and dialogue will show up using <code class="docutils literal notranslate"><span class="pre">sser1</span></code> unless you give it a different font.</p>
+</div>
+<div class="section" id="emphasis">
+<h4>Emphasis<a class="headerlink" href="#emphasis" title="Permalink to this headline">¶</a></h4>
+<p>You can emphasize text in several ways. To use the <strong>bold</strong> version of a font, use the argument <code class="docutils literal notranslate"><span class="pre">bold</span></code> after the dialogue e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;This text is bolded.&quot;</span> <span class="na">bold</span>
+</pre></div>
+</div>
+<p>Some fonts have <strong>extra-bold</strong> variants as well. These are defined in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code> in the variable <code class="docutils literal notranslate"><span class="pre">bold_xbold_fonts_list</span></code>. To make a font extra bold, add the <code class="docutils literal notranslate"><span class="pre">xbold</span></code> clause after the dialogue e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">ja</span> <span class="s2">&quot;This text is in the sans serif 2 font, extra bold.&quot;</span> <span class="n">sser2</span> <span class="n">xbold</span>
+</pre></div>
+</div>
+<p>Finally, you can increase the size of the text inside a speech bubble with the <code class="docutils literal notranslate"><span class="pre">big</span></code> argument e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">ju</span> <span class="s2">&quot;This text is shown at a bigger size.&quot;</span> <span class="n">big</span>
+</pre></div>
+</div>
+<p>You can also combine <code class="docutils literal notranslate"><span class="pre">big</span></code> and <code class="docutils literal notranslate"><span class="pre">bold</span></code> or <code class="docutils literal notranslate"><span class="pre">xbold</span></code> for additional emphasis.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;VERY IMPORTANT MESSAGE!!&quot;</span> <span class="n">sser2</span> <span class="n">big</span> <span class="n">xbold</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="underline">
+<h4>Underline<a class="headerlink" href="#underline" title="Permalink to this headline">¶</a></h4>
+<p>To underline all the text in a bubble, you can use either <code class="docutils literal notranslate"><span class="pre">underline</span></code> or <code class="docutils literal notranslate"><span class="pre">under</span></code> as part of the msg CDS:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;This text is underlined!&quot;</span> <span class="n">curly</span> <span class="na">underline</span>
+<span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;This is also underlined.&quot;</span> <span class="n">under</span>
+</pre></div>
+</div>
+<p>If you just want to underline particular words, the built-in <code class="docutils literal notranslate"><span class="pre">{u}</span></code> tag will handle that:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;This is </span><span class="si">{u}</span><span class="s2">underlined{/u} for emphasis.&quot;</span> <span class="n">glow</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="special-bubbles">
+<h4>Special Bubbles<a class="headerlink" href="#special-bubbles" title="Permalink to this headline">¶</a></h4>
+<p>You can also use special speech bubbles as the background of dialogue. There are several bubbles built in to the program:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 12%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Base bubble</strong></p></th>
+<th class="head"><p><strong>Sizes</strong></p></th>
+<th class="head"><p><strong>Additional Notes</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cloud</p></td>
+<td><p>s, m, l</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>round</p></td>
+<td><p>s, m, l</p></td>
+<td><p>Only available for <code class="docutils literal notranslate"><span class="pre">ja</span></code>, <code class="docutils literal notranslate"><span class="pre">ju</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">v</span></code>, and <code class="docutils literal notranslate"><span class="pre">y</span></code>. Using a <code class="docutils literal notranslate"><span class="pre">round</span></code> style for <code class="docutils literal notranslate"><span class="pre">z</span></code> or <code class="docutils literal notranslate"><span class="pre">r</span></code> will result in using the <code class="docutils literal notranslate"><span class="pre">flower</span></code> bubble.</p></td>
+</tr>
+<tr class="row-even"><td><p>round2</p></td>
+<td><p>s, m, l</p></td>
+<td><p>Only available for <code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>sigh</p></td>
+<td><p>s, m, l</p></td>
+<td><p>Not available for <code class="docutils literal notranslate"><span class="pre">sa</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>spike</p></td>
+<td><p>s, m, l</p></td>
+<td><p>small (s) size only available for <code class="docutils literal notranslate"><span class="pre">ja</span></code>, <code class="docutils literal notranslate"><span class="pre">ju</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>square</p></td>
+<td><p>s, m, l</p></td>
+<td><p>Not available for <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>square2</p></td>
+<td><p>s, m, l</p></td>
+<td><p>Only available for <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>flower</p></td>
+<td><p>s, m, l</p></td>
+<td><p>Only available for <code class="docutils literal notranslate"><span class="pre">r</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code>. Previously called <code class="docutils literal notranslate"><span class="pre">round</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>glow</p></td>
+<td><p>N/A</p></td>
+<td><p>Available for all pre-defined characters excluding <code class="docutils literal notranslate"><span class="pre">m</span></code> i.e. <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">ri</span></code> also have this bubble.</p></td>
+</tr>
+<tr class="row-odd"><td><p>glow2</p></td>
+<td><p>N/A</p></td>
+<td><p>Only available for <code class="docutils literal notranslate"><span class="pre">sa</span></code>. An extra variant on the <code class="docutils literal notranslate"><span class="pre">glow</span></code> bubble.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Unless otherwise mentioned, <code class="docutils literal notranslate"><span class="pre">u</span></code>, <code class="docutils literal notranslate"><span class="pre">ri</span></code>, and <code class="docutils literal notranslate"><span class="pre">m</span></code> have no special bubble variants of their own.</p>
+<p>For bubbles which have sizes, you must include which size bubble you would like (<code class="docutils literal notranslate"><span class="pre">s</span></code> for small, <code class="docutils literal notranslate"><span class="pre">m</span></code> for medium, and <code class="docutils literal notranslate"><span class="pre">l</span></code> for large) after the name of the bubble e.g. <code class="docutils literal notranslate"><span class="pre">square_m</span></code> or <code class="docutils literal notranslate"><span class="pre">sigh_l</span></code>.</p>
+<p>To use a special bubble, add the name of the bubble after dialogue e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;This is a bubble with the flower background.&quot;</span> <span class="n">flower_m</span>
+<span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;And this is a bubble with the glowing background.&quot;</span> <span class="n">glow</span>
+<span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;These can be combined with other fonts and effects, too!&quot;</span> <span class="n">glow</span> <span class="n">curly</span> <span class="n">big</span>
+</pre></div>
+</div>
+<p>You can also have the characters use each other’s special speech bubbles by prefacing the bubble name with their file_id e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;I&#39;m using Jumin&#39;s cat bubble!&quot;</span> <span class="n">bubble</span> <span class="n">ju_cloud_l</span>
+<span class="n">y</span> <span class="s2">&quot;This message uses Zen&#39;s flower bubble~&quot;</span> <span class="p">(</span><span class="n">bounce</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">specBubble</span><span class="o">=</span><span class="s2">&quot;z_flower_m&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, you can use your own bubbles with the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS. See <a class="reference internal" href="#custom-fonts-and-bubbles"><span class="std std-ref">Custom Fonts and Bubbles</span></a> for more on custom special bubbles and fonts.</p>
+</div>
+<div class="section" id="images">
+<h4>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS will automatically detect if dialogue includes a recognized emoji and mark the dialogue as an image accordingly. If you want a character to post an image in the chatroom (such as a CG), then you can use the <code class="docutils literal notranslate"><span class="pre">img</span></code> argument:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;cg s_1&quot;</span> <span class="n">img</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;I just posted a CG!&quot;</span>
+</pre></div>
+</div>
+<p>You need to follow the rules outlined in <a class="reference internal" href="cg-albums.html#defining-a-cg"><span class="std std-ref">Defining a CG</span></a> and <a class="reference internal" href="cg-albums.html#showing-a-cg-in-a-chatroom-or-text-message"><span class="std std-ref">Showing a CG in a Chatroom or Text Message</span></a> in order for the program to find the correct image and display it during a chatroom. For CGs, the program will also automatically unlock the image in the gallery.</p>
+<p>For emojis, it’s sufficient to write:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;{image=seven_wow}&quot;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">seven_wow</span></code> is the name of the emoji image to be shown. The program will automatically recognize it as an emoji.</p>
+</div>
+<div class="section" id="modifying-message-speed">
+<h4>Modifying Message Speed<a class="headerlink" href="#modifying-message-speed" title="Permalink to this headline">¶</a></h4>
+<p>Finally, you can also adjust the speed at which a message is posted. For example, if you want a character to post a bunch of messages in quick succession, you can use the <code class="docutils literal notranslate"><span class="pre">pv</span></code> clause to use a multiplier on the speed at which a message is posted e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;These&quot;</span> <span class="n">pv</span> <span class="mf">0.1</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;messages&quot;</span> <span class="n">pv</span> <span class="mf">0.1</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;are&quot;</span> <span class="n">pv</span> <span class="mf">0.1</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;posted&quot;</span> <span class="n">pv</span> <span class="mf">0.1</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;quickly!!!&quot;</span> <span class="n">pv</span> <span class="mf">0.1</span>
+</pre></div>
+</div>
+<p>If you have <code class="docutils literal notranslate"><span class="pre">paraphrase_choices</span></code> turned off, you will generally want to add <code class="docutils literal notranslate"><span class="pre">pv</span> <span class="pre">0</span></code> after a message posted by the main character after a menu e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">menu</span><span class="p">:</span>
+    <span class="s2">&quot;Emojis and Images&quot;</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="n">m</span> <span class="s2">&quot;I want to learn how to use emojis and images.&quot;</span> <span class="n">pv</span> <span class="mi">0</span>
+        <span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;Emojis and images, huh?&quot;</span> <span class="n">ser1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-the-chatroom-spreadsheet">
+<h3>Using the Chatroom Spreadsheet<a class="headerlink" href="#using-the-chatroom-spreadsheet" title="Permalink to this headline">¶</a></h3>
+<p>The second way of writing chatroom dialogue is similar to writing regular Ren’Py script, but passes special keyword arguments in brackets after the dialogue. A spreadsheet, <code class="docutils literal notranslate"><span class="pre">Script</span> <span class="pre">Generator.xlsx</span></code>, is included with the program to make this style of writing easier.</p>
+<p>The first tab in the spreadsheet is called <strong>Chatroom Instructions</strong> and explains how the <strong>CHATROOM TEMPLATE</strong> tab is used. Where possible, the spreadsheet will try to check off the appropriate boxes depending on what fonts, emphasis, or bubbles you want to use. It will also notify you if you’ve typed a character’s name incorrectly.</p>
+<p>The tab <strong>tutorial_6_meeting</strong> has examples directly from the corresponding <code class="docutils literal notranslate"><span class="pre">.rpy</span></code> file of how dialogue for that chatroom was written using the spreadsheet.</p>
+<p>In general, you should create a copy of the <strong>CHATROOM TEMPLATE</strong> tab and fill it out with your desired dialogue. Don’t forget that messages such as <code class="docutils literal notranslate"><span class="pre">707</span> <span class="pre">has</span> <span class="pre">entered</span> <span class="pre">the</span> <span class="pre">chatroom</span></code> are handled differently – see <a class="reference internal" href="#advanced-chatroom-features"><span class="std std-ref">Advanced Chatroom Features</span></a> for more.</p>
+<p>If you’ve filled out the spreadsheet correctly, you should be able to copy-paste the dialogue from the “What should be filled into the program” column into your script file.</p>
+</div>
+<div class="section" id="comparison-of-chatroom-dialogue">
+<h3>Comparison of Chatroom Dialogue<a class="headerlink" href="#comparison-of-chatroom-dialogue" title="Permalink to this headline">¶</a></h3>
+<p>Both methods of writing dialogue can be mixed and matched freely in-game. For example, if you don’t want to add any additional fonts, emphasis, or special bubbles, it can be easier to type out dialogue using just the character variable and their dialogue. Here is a comparison of what dialogue looks like for each method when various fonts, emphasis, and special bubbles are added:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># msg CDS</span>
+<span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;Extra bold sans serif 2 font&quot;</span> <span class="n">sser2</span> <span class="n">xbold</span>
+<span class="c1"># Spreadsheet dialogue</span>
+<span class="n">u</span> <span class="s2">&quot;{=sser2xb}Extra bold sans serif 2 font{/=sser2xb}&quot;</span>
+
+<span class="c1"># msg CDS</span>
+<span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;Glowing bubble with blocky font&quot;</span> <span class="n">blocky</span> <span class="n">glow</span>
+<span class="c1"># Spreadsheet dialogue</span>
+<span class="n">u</span> <span class="s2">&quot;{=blocky}Glowing bubble with blocky font{/=blocky}&quot;</span> <span class="p">(</span><span class="n">bounce</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># msg CDS</span>
+<span class="n">msg</span> <span class="n">z</span> <span class="s2">&quot;Bold large curly font with flower bubble&quot;</span> <span class="n">curly</span> <span class="na">bold</span> <span class="n">big</span> <span class="n">flower_m</span>
+<span class="c1"># Spreadsheet dialogue</span>
+<span class="n">z</span> <span class="s2">&quot;{=curly}{size=+10}</span><span class="si">{b}</span><span class="s2">Bold large curly font with flower bubble{/b}{/size}{/=curly}&quot;</span> <span class="p">(</span><span class="n">bounce</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">specBubble</span><span class="o">=</span><span class="s2">&quot;flower_m&quot;</span><span class="p">)</span>
+
+<span class="c1"># msg CDS</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;{image=seven_wow}&quot;</span>
+<span class="c1"># Spreadsheet dialogue</span>
+<span class="n">s</span> <span class="s2">&quot;{image=seven_wow}&quot;</span> <span class="p">(</span><span class="n">img</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># msg CDS</span>
+<span class="n">msg</span> <span class="n">m</span> <span class="s2">&quot;Dialogue with a speed modifier.&quot;</span> <span class="n">pv</span> <span class="mi">0</span>
+<span class="c1"># Spreadsheet dialogue</span>
+<span class="n">m</span> <span class="s2">&quot;Dialogue with a speed modifier.&quot;</span> <span class="p">(</span><span class="n">pauseVal</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># msg CDS</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;cg s_1&quot;</span> <span class="n">img</span>
+<span class="c1"># Spreadsheet dialogue</span>
+<span class="n">s</span> <span class="s2">&quot;cg s_1&quot;</span> <span class="p">(</span><span class="n">img</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you have script from v2.x or earlier, you don’t need to modify it to work with the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS. You can mix and match script writing styles within the same chatroom.</p>
+</div>
+</div>
+</div>
+<div class="section" id="advanced-chatroom-features">
+<h2>Advanced Chatroom Features<a class="headerlink" href="#advanced-chatroom-features" title="Permalink to this headline">¶</a></h2>
+<p>Now that you’ve made a label for your chatroom and filled it with some dialogue, you may want to add additional polish to your chatroom, like allowing the player to make a choice or adding the special <code class="docutils literal notranslate"><span class="pre">707</span> <span class="pre">has</span> <span class="pre">entered</span> <span class="pre">the</span> <span class="pre">chatroom</span></code>-style messages.</p>
+<div class="section" id="entering-and-exiting-the-chatroom">
+<h3>Entering and Exiting the Chatroom<a class="headerlink" href="#entering-and-exiting-the-chatroom" title="Permalink to this headline">¶</a></h3>
+<p>To get the message <code class="docutils literal notranslate"><span class="pre">Character</span> <span class="pre">has</span> <span class="pre">entered</span> <span class="pre">the</span> <span class="pre">chatroom</span></code>, use the <code class="docutils literal notranslate"><span class="pre">enter</span> <span class="pre">chatroom</span></code> CDS:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">enter</span> <span class="n">chatroom</span> <span class="n">s</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">s</span></code> is the variable of the character who is entering the chatroom. See <a class="reference internal" href="creating-characters.html#creating-characters"><span class="std std-ref">Creating Characters</span></a> for a list of the characters currently programmed into the game.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">enter(s)</span></code> to have a character enter the chatroom.</p>
+</div>
+<p>To get the message <code class="docutils literal notranslate"><span class="pre">Character</span> <span class="pre">has</span> <span class="pre">left</span> <span class="pre">the</span> <span class="pre">chatroom</span></code>, use the <code class="docutils literal notranslate"><span class="pre">exit</span> <span class="pre">chatroom</span></code> CDS:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">exit</span> <span class="n">chatroom</span> <span class="n">s</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">s</span></code> is the variable of the character who is exiting the chatroom.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">exit(s)</span></code> to have a character leave the chatroom.</p>
+</div>
+</div>
+<div class="section" id="updating-the-characters-profiles">
+<h3>Updating the Characters’ Profiles<a class="headerlink" href="#updating-the-characters-profiles" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="updating-the-profile-picture">
+<h4>Updating the Profile Picture<a class="headerlink" href="#updating-the-profile-picture" title="Permalink to this headline">¶</a></h4>
+<p>To update a character’s profile picture, you just need to write</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">ja</span><span class="o">.</span><span class="n">prof_pic</span> <span class="o">=</span> <span class="s2">&quot;Profile Pics/Jaehee/jae-2.webp&quot;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">ja</span></code> is the ChatCharacter variable of the character whose profile picture you’d like to update. Profile pictures should be 110x110 pixels at minimum, and can optionally have a second, larger version supplied that is up to 314x314 pixels and will be used on the character’s profile screen. The program looks for the larger version under the same name with the suffix <code class="docutils literal notranslate"><span class="pre">-b</span></code> e.g. <code class="docutils literal notranslate"><span class="pre">Profile</span> <span class="pre">Pics/Jaehee/jae-2-b.webp</span></code>.</p>
+<p>You can update a profile picture anywhere – during a chatroom, phone call, text message, etc. To have the profile picture show up in the History screen as well as during regular gameplay, it is recommended that you change the profile picture at the beginning of a label and its associated expired version, if applicable e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">day_1_chatroom_1</span><span class="p">():</span>
+    <span class="k">$</span> <span class="n">r</span><span class="o">.</span><span class="n">prof_pic</span> <span class="o">=</span> <span class="s2">&quot;Profile Pics/Ray/ray-1.webp&quot;</span>
+    <span class="k">play</span> <span class="k">music</span> <span class="n">mint_eye</span>
+    <span class="n">enter</span> <span class="n">chatroom</span> <span class="n">r</span>
+    <span class="n">msg</span> <span class="n">r</span> <span class="s2">&quot;Good morning!&quot;</span> <span class="n">curly</span> <span class="n">glow</span>
+</pre></div>
+</div>
+<p>Updating a character’s profile picture will automatically change their portrait on the homepage to have an “updated” background.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are also bonus profile pictures, which the player can update themselves. For more on that, see <a class="reference internal" href="miscellaneous.html#bonus-profile-pictures"><span class="std std-ref">Bonus Profile Pictures</span></a>.</p>
+</div>
+</div>
+<div class="section" id="updating-a-character-s-status">
+<h4>Updating a Character’s Status<a class="headerlink" href="#updating-a-character-s-status" title="Permalink to this headline">¶</a></h4>
+<p>To update a character’s status, use</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">ju</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;I wonder what Elizabeth the 3rd is up to...&quot;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">ju</span></code> is the ChatCharacter variable of the character whose status you would like to update. Updating a character’s status will automatically give their portrait on the homepage an “updated” background to indicate there is new information on their profile page.</p>
+<p>You can update a character’s status wherever you like inside a label; in the middle of phone calls, at the end of a chatroom, in the <code class="docutils literal notranslate"><span class="pre">after_</span></code> label, wherever.</p>
+</div>
+<div class="section" id="updating-the-character-s-cover-photo">
+<h4>Updating the Character’s Cover Photo<a class="headerlink" href="#updating-the-character-s-cover-photo" title="Permalink to this headline">¶</a></h4>
+<p>To update a character’s cover photo, use</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">s</span><span class="o">.</span><span class="n">cover_pic</span> <span class="o">=</span> <span class="s2">&quot;Cover Photos/rfa_cover.webp&quot;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">s</span></code> is the ChatCharacter variable of the character whose cover photo you would like to update. Cover photos should be 750 x 672 pixels in size.</p>
+<p>Updating a character’s cover photo will automatically give their portrait on the homepage an “updated” background to indicate their is new information on their profile page.</p>
+<p>You can update a character’s cover photo wherever you like inside a label; during Story Mode, in the middle of an expired chatroom, in a text message, wherever.</p>
+</div>
+</div>
+<div class="section" id="clearing-the-chat-history">
+<h3>Clearing the Chat History<a class="headerlink" href="#clearing-the-chat-history" title="Permalink to this headline">¶</a></h3>
+<p>If you would like to clear the chat history so that all previous messages are erased, you can use the <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">chat</span></code> CDS:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="s2">&quot;Anyway, I should go now.&quot;</span>
+<span class="n">exit</span> <span class="n">chatroom</span> <span class="n">y</span>
+<span class="k">clear</span> <span class="n">chat</span>
+<span class="k">scene</span> <span class="n">hack</span>
+<span class="k">show</span> <span class="n">hack</span> <span class="n">effect</span>
+<span class="n">enter</span> <span class="n">chatroom</span> <span class="n">u</span>
+<span class="n">u</span> <span class="s2">&quot;Hi, [name].&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The chat history is automatically cleared before beginning a new chatroom.</p>
+</div>
+</div>
+<div class="section" id="clearing-chatroom-participants">
+<h3>Clearing Chatroom Participants<a class="headerlink" href="#clearing-chatroom-participants" title="Permalink to this headline">¶</a></h3>
+<p>If you would like to clear all current chatroom participants from the chatroom header, you can use the extra argument <code class="docutils literal notranslate"><span class="pre">participants</span></code> for the <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">chat</span></code> CDS:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">my_chatroom</span><span class="p">:</span>
+    <span class="k">scene</span> <span class="n">morning</span>
+    <span class="k">play</span> <span class="k">music</span> <span class="n">narcissistic_jazz</span>
+    <span class="n">enter</span> <span class="n">chatroom</span> <span class="n">z</span>
+    <span class="n">z</span> <span class="s2">&quot;Has the chatroom been acting up for you too, [name]?&quot;</span>
+    <span class="n">msg</span> <span class="n">z</span> <span class="s2">&quot;I&#39;ve been having trouble with it all morning.&quot;</span> <span class="n">sigh_s</span>
+    <span class="k">clear</span> <span class="n">chat</span> <span class="n">participants</span>
+    <span class="k">scene</span> <span class="n">hack</span>
+    <span class="k">show</span> <span class="n">hack</span> <span class="n">effect</span>
+    <span class="n">enter</span> <span class="n">chatroom</span> <span class="n">u</span>
+    <span class="n">u</span> <span class="s2">&quot;Ah, excellent.&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;I&#39;ve gained access to the messenger.&quot;</span>
+</pre></div>
+</div>
+<p>This will both clear the chat history and remove any existing participants from the list at the top of the messenger screen.</p>
+<p>This isn’t typically used outside of using story mode sections in the middle of chatrooms (see <a class="reference internal" href="story-mode.html#including-a-story-mode-during-a-chatroom"><span class="std std-ref">Including a Story Mode During a Chatroom</span></a>) or linking together “separate” chatrooms as part of a scene for something like an After End.</p>
+</div>
+<div class="section" id="resetting-chatroom-participants">
+<h3>Resetting Chatroom Participants<a class="headerlink" href="#resetting-chatroom-participants" title="Permalink to this headline">¶</a></h3>
+<p>Similar to the above section on clearing chat participants, there is also a special function provided to reset chat participants even without jumping to Story Mode and back, for example, as part of a montage of chatroom sequences. The function is called <code class="docutils literal notranslate"><span class="pre">reset_participants</span></code> and takes one parameter, a list of ChatCharacters to add back to the participants list.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="s2">&quot;This is the end of the first chatroom.&quot;</span>
+<span class="k">$</span> <span class="n">reset_participants</span><span class="p">([</span><span class="n">z</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">m</span><span class="p">])</span>
+<span class="n">s</span> <span class="s2">&quot;Hey [name], Zen, you haven&#39;t seen anything suspicious lately, right?&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to add <code class="docutils literal notranslate"><span class="pre">m</span></code> to the participant list yourself if you would like the player to appear in the participants list after the reset, regardless of whether the chatroom was expired or not.</p>
+</div>
+</div>
+<div class="section" id="providing-choices">
+<h3>Providing Choices<a class="headerlink" href="#providing-choices" title="Permalink to this headline">¶</a></h3>
+<p>During a chatroom, you may want to allow the player to make a choice. This can be accomplished with Ren’Py’s built-in menu system:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;What kind of food do you eat?&quot;</span>
+<span class="k">menu</span><span class="p">:</span>
+    <span class="s2">&quot;I like soup.&quot;</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;You like soup?&quot;</span>
+    <span class="s2">&quot;I eat a lot of junk food.&quot;</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;lolol same.&quot;</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;But you should have a balanced diet, unlike me~&quot;</span> <span class="n">glow</span>
+</pre></div>
+</div>
+<p>Note that for this menu, it is assumed that <code class="docutils literal notranslate"><span class="pre">paraphrase_choices</span></code> is turned on for this route. This means that the main character will automatically say the exact dialogue on the chosen choice. If <code class="docutils literal notranslate"><span class="pre">paraphrase_choices</span></code> is turned off, the menu might look something like this:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;What kind of food do you eat?&quot;</span>
+<span class="k">menu</span><span class="p">:</span>
+    <span class="s2">&quot;I like soup.&quot;</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="n">m</span> <span class="s2">&quot;I like soup.&quot;</span> <span class="n">pv</span> <span class="mi">0</span>
+        <span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;You like soup?&quot;</span>
+    <span class="s2">&quot;I eat a lot of junk food.&quot;</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="n">m</span> <span class="s2">&quot;I eat a lot of junk food.&quot;</span> <span class="n">pv</span> <span class="mi">0</span>
+        <span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;lolol same.&quot;</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;But you should have a balanced diet, unlike me~&quot;</span> <span class="n">glow</span>
+</pre></div>
+</div>
+<p>You can also turn <code class="docutils literal notranslate"><span class="pre">paraphrased</span></code> on or off on a per-menu or per-choice basis. For more on paraphrasing, see <a class="reference internal" href="miscellaneous.html#paraphrased-choices"><span class="std std-ref">Paraphrased Choices</span></a>.</p>
+<p>You can add as many choices as you want to the menu, though only 5 options will fit on the screen at once. All code indented after a choice will only be run if the player picks that choice. So, only a player who chose <code class="docutils literal notranslate"><span class="pre">&quot;I</span> <span class="pre">like</span> <span class="pre">soup&quot;</span></code> will see the line <code class="docutils literal notranslate"><span class="pre">&quot;You</span> <span class="pre">like</span> <span class="pre">soup?&quot;</span></code>. Anything indented at the same level as the menu will be run regardless of the choice made, so the player will see the line <code class="docutils literal notranslate"><span class="pre">&quot;But</span> <span class="pre">you</span> <span class="pre">should</span> <span class="pre">have</span> <span class="pre">a</span> <span class="pre">balanced</span> <span class="pre">diet,</span> <span class="pre">unlike</span> <span class="pre">me~&quot;</span></code> regardless of whether they said they like soup or eat junk food.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">TAB</span></code> key to indent your code an additional level to the right, but make sure your code editor is using spaces to indent code. Otherwise, you will get errors complaining about “tab” characters in your code.</p>
+</div>
+<p>You’ll also notice in the “paraphrased” version of the menu, the main character (<code class="docutils literal notranslate"><span class="pre">m</span></code>) has the clauses <code class="docutils literal notranslate"><span class="pre">pv</span> <span class="pre">0</span></code> after their dialogue. This tells the program to not wait at all before posting the MC’s message. Usually the program will pause before posting a message to simulate “typing time”, but you want the player’s choice to appear right away after a choice, so you should include <code class="docutils literal notranslate"><span class="pre">pv</span> <span class="pre">0</span></code> if you’re using the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS, or <code class="docutils literal notranslate"><span class="pre">(pauseVal=0)</span></code> if you’re using the spreadsheet style.</p>
+</div>
+<div class="section" id="showing-a-chatroom-banner">
+<h3>Showing a Chatroom Banner<a class="headerlink" href="#showing-a-chatroom-banner" title="Permalink to this headline">¶</a></h3>
+<p>There are four special banners included in the program. The available banners are:</p>
+<ul class="simple">
+<li><p>lightning</p></li>
+<li><p>heart</p></li>
+<li><p>annoy</p></li>
+<li><p>well</p></li>
+</ul>
+<p>You can show a banner with the code:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">banner</span> <span class="n">lightning</span>
+</pre></div>
+</div>
+<p>Note that while the order of <code class="docutils literal notranslate"><span class="pre">banner</span></code> and <code class="docutils literal notranslate"><span class="pre">lightning</span></code> don’t matter, the name is case-sensitive. So, you could also use <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">lightning</span> <span class="pre">banner</span></code> but <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">Lightning</span> <span class="pre">banner</span></code> would not work.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These images are not displayed for players who have toggled the <strong>Chatroom Banners</strong> setting off.</p>
+</div>
+</div>
+<div class="section" id="showing-a-heart-icon">
+<h3>Showing a Heart Icon<a class="headerlink" href="#showing-a-heart-icon" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="awarding-a-heart-point">
+<h4>Awarding a heart point<a class="headerlink" href="#awarding-a-heart-point" title="Permalink to this headline">¶</a></h4>
+<p>To show a heart icon to the player and award them “heart points” associated with a particular character, use</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">award</span> <span class="n">heart</span> <span class="n">s</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">s</span></code> is the variable of the character whose heart icon you’d like to show. The player will receive one heart point with that character when this code is run. See <a class="reference internal" href="creating-characters.html#creating-characters"><span class="std std-ref">Creating Characters</span></a> for a list of the characters built-in to the program and how to add your own character.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ray (<code class="docutils literal notranslate"><span class="pre">r</span></code>) and Saeran (<code class="docutils literal notranslate"><span class="pre">sa</span></code>) share heart points. So, if you award a heart point for Saeran via <code class="docutils literal notranslate"><span class="pre">award</span> <span class="pre">heart</span> <span class="pre">sa</span></code>, Ray will also receive 1 heart point.</p>
+</div>
+<p>There is also a second optional argument to <code class="docutils literal notranslate"><span class="pre">award</span> <span class="pre">heart</span></code>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">award</span> <span class="n">heart</span> <span class="n">ju</span> <span class="n">bad</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">bad</span></code> tells the program that this heart is a “bad” heart point, and should count towards a bad ending. In-game, a <code class="docutils literal notranslate"><span class="pre">bad</span></code> heart appears the same as a normal heart point. You can use this method to count the number of choices a player makes that would lead towards a bad ending, and then check whether the player made more “good” or “bad” ending choices when they reach a plot branch. See <a class="reference internal" href="plot-branches.html#plot-branches"><span class="std std-ref">Plot Branches</span></a> for more information on this.</p>
+</div>
+<div class="section" id="removing-a-heart-point">
+<h4>Removing a heart point<a class="headerlink" href="#removing-a-heart-point" title="Permalink to this headline">¶</a></h4>
+<p>If the player makes a choice a character doesn’t like, you can cause them to lose a point with a character by showing a “heart break” icon.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">break</span> <span class="n">heart</span> <span class="n">ju</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">ju</span></code> is the variable of the character whose heart break you’d like to show. This will <strong>always</strong> subtract points from the character’s “good” heart points and never the “bad” points. Note that losing heart points in this way does not subtract from the heart point totals the player uses to unlock additional profile pictures for a character (See <a class="reference internal" href="miscellaneous.html#bonus-profile-pictures"><span class="std std-ref">Bonus Profile Pictures</span></a>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">break</span> <span class="pre">heart</span> <span class="pre">ju</span></code> and <code class="docutils literal notranslate"><span class="pre">heart</span> <span class="pre">break</span> <span class="pre">ju</span></code> will show the heart break animation for the character <code class="docutils literal notranslate"><span class="pre">ju</span></code>. You can’t switch the word order for <code class="docutils literal notranslate"><span class="pre">award</span> <span class="pre">heart</span></code> though!</p>
+</div>
+</div>
+</div>
+<div class="section" id="awarding-an-hourglass">
+<h3>Awarding an Hourglass<a class="headerlink" href="#awarding-an-hourglass" title="Permalink to this headline">¶</a></h3>
+<p>Hourglasses are randomly awarded to players when certain bubbles (specified in <code class="docutils literal notranslate"><span class="pre">hourglass_bubbles</span></code> in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code>) are used in chatroom dialogue so long as <code class="docutils literal notranslate"><span class="pre">Receive</span> <span class="pre">Hourglasses</span> <span class="pre">in</span> <span class="pre">Chatrooms</span></code> is active from the Developer options. However, you can also manually award the player hourglasses with a special function, <code class="docutils literal notranslate"><span class="pre">award_hourglass</span></code>. The function takes two fields:</p>
+<dl>
+<dt><cite>random</cite></dt><dd><p>False by default. Set this to True if you would like there to be a random chance of getting an hourglass even when this function is triggered (e.g. you have a specific message you’d like to potentially award an hourglass, but it shouldn’t be guaranteed).</p>
+</dd>
+<dt><cite>force</cite></dt><dd><p>False by default. Set this to True if you’d like to force the player to receive an hourglass in all circumstances. Note that this isn’t the same as having <code class="docutils literal notranslate"><span class="pre">random=False</span></code>; <code class="docutils literal notranslate"><span class="pre">force</span></code> means that even if the player is viewing an expired chatroom or watching a replay from the History, they will receive an hourglass, <em>including if</em> you have <code class="docutils literal notranslate"><span class="pre">Receive</span> <span class="pre">Hourglasses</span> <span class="pre">in</span> <span class="pre">Chatrooms</span></code> turned off from the developer settings.</p>
+<p>This option is largely intended for non-playable gameplay such that you might record a video of. If you’d simply like to guarantee the player receives an hourglass in the event that it is possible to receive them based on how they’re viewing the current story item, then you should leave both <code class="docutils literal notranslate"><span class="pre">random</span></code> and <code class="docutils literal notranslate"><span class="pre">force</span></code> as False.</p>
+</dd>
+</dl>
+<p>In the game, you might use it as follows:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">z</span> <span class="s2">&quot;I hope I&#39;ll see you soon, [name]~&quot;</span> <span class="n">flower_m</span> <span class="n">curly</span>
+<span class="k">$</span> <span class="n">award_hourglass</span><span class="p">(</span><span class="n">random</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">msg</span> <span class="n">z</span> <span class="s2">&quot;I should go get ready.&quot;</span>
+</pre></div>
+</div>
+<p>This will randomly award the player an hourglass when they see the line “I hope I’ll see you soon, [name]~” (that is, on some playthroughs they will receive an hourglass, and on others they will not). They won’t see this hourglass if they’re viewing this chat from the History or on a rewatch.</p>
+</div>
+<div class="section" id="showing-the-hacked-scroll-effect">
+<h3>Showing the Hacked Scroll Effect<a class="headerlink" href="#showing-the-hacked-scroll-effect" title="Permalink to this headline">¶</a></h3>
+<p>To show the scrolling “hack” effect during a chatroom, use the line</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">hack</span> <span class="n">effect</span>
+</pre></div>
+</div>
+<p>or alternatively,</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">redhack</span> <span class="n">effect</span>
+</pre></div>
+</div>
+<p>for the red version of the scrolling hack image. You can reverse the direction of the scrolling with <code class="docutils literal notranslate"><span class="pre">reverse</span></code> e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">hack</span> <span class="n">effect</span> <span class="n">reverse</span>
+<span class="n">exit</span> <span class="n">chatroom</span> <span class="n">u</span>
+<span class="k">show</span> <span class="n">redhack</span> <span class="n">effect</span> <span class="n">reverse</span>
+</pre></div>
+</div>
+<p>There is also a “red static” effect which can be shown with:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">red</span> <span class="n">static</span> <span class="n">effect</span>
+</pre></div>
+</div>
+<p>This can also be reversed by adding the <cite>reverse</cite> tag:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">red</span> <span class="n">static</span> <span class="n">effect</span> <span class="n">reverse</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These effects are not displayed for players who have toggled the <strong>Hacking Effects</strong> setting off.</p>
+</div>
+</div>
+<div class="section" id="showing-the-secure-chatroom-animation">
+<h3>Showing the Secure Chatroom Animation<a class="headerlink" href="#showing-the-secure-chatroom-animation" title="Permalink to this headline">¶</a></h3>
+<p>To show the “secure chatroom” animation, use the line</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">secure</span> <span class="n">anim</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re using this effect, you may also want to change the background of the chatroom box on the timeline screen. You can do this with the <code class="docutils literal notranslate"><span class="pre">box_bg</span></code> parameter when defining a ChatRoom for the route e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">ChatRoom</span><span class="p">(</span><span class="s1">&#39;Hacking&#39;</span><span class="p">,</span> <span class="s1">&#39;hack_example&#39;</span><span class="p">,</span> <span class="s1">&#39;20:41&#39;</span><span class="p">,</span> <span class="n">box_bg</span><span class="o">=</span><span class="s1">&#39;secure&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="shaking-the-screen">
+<h3>Shaking the Screen<a class="headerlink" href="#shaking-the-screen" title="Permalink to this headline">¶</a></h3>
+<p>To shake the screen, use the line</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">shake</span>
+</pre></div>
+</div>
+<p>Screen shake is compatible both with regular backgrounds and with the animated backgrounds.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This effect is not displayed for players who have toggled the <strong>Screen Shake</strong> setting off.</p>
+</div>
+</div>
+<div class="section" id="showing-the-cracked-overlay">
+<h3>Showing the Cracked Overlay<a class="headerlink" href="#showing-the-cracked-overlay" title="Permalink to this headline">¶</a></h3>
+<p>There is also a “cracked” overlay you can layer on top of any chatroom background (including animated backgrounds). It gives the appearance of cracked glass on top of the background. After showing your background, show the crack effect like:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">scene</span> <span class="n">redhack</span>
+<span class="k">show</span> <span class="n">screen_crack</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sending-links">
+<h3>Sending Links<a class="headerlink" href="#sending-links" title="Permalink to this headline">¶</a></h3>
+<p>Characters may also send links in the chatroom. You can provide an action for a link message, which will be executed when the player clicks on it. Some convenience functions are provided to make some of these actions simpler.</p>
+<p>The simplest way to show a link looks like:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">va</span> <span class="s2">&quot;Click Link&quot;</span> <span class="p">(</span><span class="n">link_title</span><span class="o">=</span><span class="s2">&quot;Password&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>There are several fields you can provide to a link message to customize it. You must provide at least one of these fields in order for a message to be considered a link.</p>
+<dl>
+<dt><cite>link_title</cite></dt><dd><p>By default, links do not have titles. If provided, the title will be shown in a smaller size above the link’s text inside square brackets (so, <code class="docutils literal notranslate"><span class="pre">link_title=&quot;Password&quot;</span></code> appears in-game like <code class="docutils literal notranslate"><span class="pre">[Password]</span></code>.</p>
+<p>e.g. “Address”</p>
+</dd>
+<dt><cite>link_img</cite></dt><dd><p>By default, this is an image of a house. It is 81x81 pixels but can be slightly larger or smaller. You can also provide a general displayable such as a Transform or an AlphaMask.</p>
+<p>If you don’t want an image at all, this should be <code class="docutils literal notranslate"><span class="pre">Null()</span></code>, so <code class="docutils literal notranslate"><span class="pre">link_img=Null()</span></code> will prevent the link message from having an image.</p>
+<p>e.g. “Bubble/link_house_btn.webp”</p>
+</dd>
+<dt><cite>link_action</cite></dt><dd><p>By default, a link button will not have any action at all and will not be interactable. See <a class="reference internal" href="#link-actions"><span class="std std-ref">Link Actions</span></a> for more action examples.</p>
+<p>e.g. ShowCG(‘common_1’)</p>
+</dd>
+<dt><cite>link_text</cite></dt><dd><p>Optional. If this isn’t provided, the link text takes the character’s dialogue (so in the line <code class="docutils literal notranslate"><span class="pre">va</span> <span class="pre">&quot;Click</span> <span class="pre">me&quot;</span> <span class="pre">(link_action=ShowCG('common_1'))</span></code>, the <code class="docutils literal notranslate"><span class="pre">link_text</span></code> is “Click me”. If the dialogue is empty, it will be the phrase “Click Link”.</p>
+<p>e.g. “Click Link”</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS for links as well, though it can’t take any additional special parameters such as font, bounce/glow, image, or specBubble. A msg version of a link post might look like:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">va</span> <span class="s2">&quot;Click Link&quot;</span> <span class="p">(</span><span class="n">link_title</span><span class="o">=</span><span class="s2">&quot;Password&quot;</span><span class="p">,</span> <span class="n">link_img</span><span class="o">=</span><span class="n">Null</span><span class="p">(),</span> <span class="n">link_action</span><span class="o">=</span><span class="n">JumpVN</span><span class="p">(</span><span class="s1">&#39;unlock_door&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="link-actions">
+<h4>Link Actions<a class="headerlink" href="#link-actions" title="Permalink to this headline">¶</a></h4>
+<p>Link messages can take any action you want. By default, only a <code class="docutils literal notranslate"><span class="pre">ShowCG</span></code> action (which shows a CG image) can be clicked more than once. All other actions (including multiple actions in a list) cause the link button to be insensitive after the action has executed once.</p>
+<p>Some special link actions include:</p>
+<dl>
+<dt><cite>ShowCG</cite></dt><dd><p>Takes one argument, the name of the CG image to show. This follows the same naming rules as <a class="reference internal" href="cg-albums.html#defining-a-cg"><span class="std std-ref">Defining a CG</span></a> and <a class="reference internal" href="cg-albums.html#showing-a-cg-in-a-chatroom-or-text-message"><span class="std std-ref">Showing a CG in a Chatroom or Text Message</span></a>, so if you have:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">image</span> <span class="n">cg</span> <span class="n">common_4</span> <span class="o">=</span> <span class="s2">&quot;CGs/common_album/cg-4.webp&quot;</span>
+<span class="k">default</span> <span class="n">common_album</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Album</span><span class="p">(</span><span class="s2">&quot;cg common_1&quot;</span><span class="p">),</span>
+    <span class="n">Album</span><span class="p">(</span><span class="s2">&quot;cg common_2&quot;</span><span class="p">),</span>
+    <span class="n">Album</span><span class="p">(</span><span class="s2">&quot;cg common_3&quot;</span><span class="p">),</span>
+    <span class="n">Album</span><span class="p">(</span><span class="s2">&quot;cg common_4&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>and you want to show “cg common_4”, then you should use the action <code class="docutils literal notranslate"><span class="pre">ShowCG(&quot;common_4&quot;)</span></code>.</p>
+<p>This will also take care of automatically unlocking the CG in the player’s album.</p>
+</dd>
+<dt><cite>JumpVN</cite></dt><dd><p>This action will take the player to a Story Mode (VN) section before returning to the chat. It works the same way as <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">vn_during_chat</span></code> as explained in <a class="reference internal" href="story-mode.html#including-a-story-mode-during-a-chatroom"><span class="std std-ref">Including a Story Mode During a Chatroom</span></a>. The first argument should be the name of the label the program should jump to for the story mode.</p>
+<p>It also takes all the same arguments, including <code class="docutils literal notranslate"><span class="pre">clearchat_on_return</span></code>, <code class="docutils literal notranslate"><span class="pre">new_bg</span></code>, <code class="docutils literal notranslate"><span class="pre">reset_participants</span></code>, and <code class="docutils literal notranslate"><span class="pre">end_after_vn</span></code>.</p>
+<p>e.g. <code class="docutils literal notranslate"><span class="pre">JumpVN(&quot;my_story_label&quot;,</span> <span class="pre">end_after_vn=True)</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless you pass the argument <code class="docutils literal notranslate"><span class="pre">end_after_vn=True</span></code> to JumpVN, when the Story Mode ends the game will return to the chatroom exactly where the chat left off before the player clicked the link which took them to Story Mode.</p>
+<p>This means if you have a chatroom like:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="s2">&quot;Click Link&quot;</span> <span class="p">(</span><span class="n">link_title</span><span class="o">=</span><span class="s2">&quot;Password&quot;</span><span class="p">,</span> <span class="n">link_action</span><span class="o">=</span><span class="n">JumpVN</span><span class="p">(</span><span class="s2">&quot;prologue_unlock_door&quot;</span><span class="p">))</span>
+<span class="n">u</span> <span class="s2">&quot;That&#39;s the password for the door.&quot;</span>
+<span class="c1"># Player clicks the link before this next message appears</span>
+<span class="n">u</span> <span class="s2">&quot;Try to use it, okay?&quot;</span>
+</pre></div>
+</div>
+<p>If the player clicks the link where indicated, when they return to the chatroom, Unknown will post the message “Try to use it, okay?” and the rest of the chatroom will proceed as normal. It’s the equivalent of:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="s2">&quot;That&#39;s the password for the door.&quot;</span>
+<span class="k">call</span> <span class="n">vn_during_chat</span><span class="p">(</span><span class="s1">&#39;prologue_unlock_door&#39;</span><span class="p">)</span>
+<span class="n">u</span> <span class="s2">&quot;Try to use it, okay?&quot;</span>
+</pre></div>
+</div>
+<p>However, with the link, the player <strong>does not</strong> have to click the link to proceed; the chat will simply continue even if they do nothing. If you want to stop the chat to ensure the player clicks the link, see <a class="reference internal" href="#stopping-the-chat"><span class="std std-ref">Stopping the Chat</span></a>.</p>
+</div>
+</dd>
+<dt><cite>LinkJump(label=None, is_menu=False)</cite></dt><dd><p>Similar to <code class="docutils literal notranslate"><span class="pre">JumpVN</span></code>, this action acts as a jump between labels. Unlike <code class="docutils literal notranslate"><span class="pre">JumpVN</span></code>, however, the jump is intended to be within the same chatroom, rather than jumping to a Story Mode (VN) section.</p>
+<p><code class="docutils literal notranslate"><span class="pre">LinkJump</span></code> takes two optional parameters. The first, <code class="docutils literal notranslate"><span class="pre">label</span></code>, is the name of a label or menu to jump to when the link is pressed. If left blank, this acts like <code class="docutils literal notranslate"><span class="pre">ContinueChat</span></code> if the chat is stopped, or does nothing if the chat is not stopped.</p>
+<p><code class="docutils literal notranslate"><span class="pre">is_menu</span></code> can be set to True if you would like this LinkJump to jump to a menu without showing the answer button at the bottom of the screen. For example:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="s2">&quot;Click Link&quot;</span> <span class="p">(</span><span class="n">link_title</span><span class="o">=</span><span class="s2">&quot;Address&quot;</span><span class="p">,</span> <span class="n">link_action</span><span class="o">=</span><span class="n">LinkJump</span><span class="p">(</span><span class="s1">&#39;getaddress&#39;</span><span class="p">,</span> <span class="n">is_menu</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="k">stop</span> <span class="n">chat</span>
+<span class="k">menu</span> <span class="n">getaddress</span> <span class="p">(</span><span class="n">paraphrased</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="s2">&quot;(Go to the sent address).&quot;</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>When the player presses the link, they will immediately see the option to (Go to the sent address) as though they had pressed the answer button on a menu.</p>
+</dd>
+<dt><cite>ContinueChat</cite></dt><dd><p>This action will cause the chat to continue if it was previously stopped.</p>
+</dd>
+<dt><cite>IfChatStopped(true_action, false_action=None)</cite></dt><dd><p>This is a special action that takes two parameters. The first is the action (or list of actions) to perform if the chat is stopped when this button is clicked. It can also be <code class="docutils literal notranslate"><span class="pre">None</span></code> to do nothing if the chat is stopped.</p>
+<p>The second parameter is the action to perform if the chat is not stopped (see the section below for more on stopping the chat). This parameter can also be <code class="docutils literal notranslate"><span class="pre">None</span></code> or omitted to do nothing if the chat is not stopped.</p>
+<p>e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">link_action</span><span class="o">=</span><span class="n">IfChatStopped</span><span class="p">([</span><span class="n">ShowCG</span><span class="p">(</span><span class="s1">&#39;common_2&#39;</span><span class="p">),</span> <span class="n">ContinueChat</span><span class="p">()],</span> <span class="n">ShowCG</span><span class="p">(</span><span class="s1">&#39;common_3&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This causes the CG “common_2” to be shown to the player if the chat is paused before continuing the chat. Otherwise, if the chat is not paused, clicking the link will show the “common_3” CG instead.</p>
+<p>This action is useful if you only want the player to be able to proceed by clicking a link once the chat is stopped e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">link_action</span><span class="o">=</span><span class="n">IfChatStopped</span><span class="p">(</span><span class="n">JumpVN</span><span class="p">(</span><span class="s1">&#39;drive_scene_2&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If used as the link action, the player can only click on the link when the chat is stopped.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="stopping-the-chat">
+<h4>Stopping the Chat<a class="headerlink" href="#stopping-the-chat" title="Permalink to this headline">¶</a></h4>
+<p>If you want to stop the chat to wait for the player to click on a link, you can do so with <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">chat</span></code> e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="s2">&quot;Click Link&quot;</span> <span class="p">(</span><span class="n">link_title</span><span class="o">=</span><span class="s2">&quot;Password&quot;</span><span class="p">,</span>
+    <span class="n">link_action</span><span class="o">=</span><span class="n">JumpVN</span><span class="p">(</span><span class="s1">&#39;unlock_door_password&#39;</span><span class="p">))</span>
+<span class="k">stop</span> <span class="n">chat</span>
+</pre></div>
+</div>
+<p>This will prevent any further messages from being posted and displays the text “Click the link to proceed” at the bottom of the screen. If you would like to change the text, at the bottom, you can also provide a string after <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">chat</span></code> like:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="s2">&quot;Click Link&quot;</span> <span class="p">(</span><span class="n">link_title</span><span class="o">=</span><span class="s2">&quot;Password&quot;</span><span class="p">,</span>
+    <span class="n">link_action</span><span class="o">=</span><span class="n">JumpVN</span><span class="p">(</span><span class="s1">&#39;unlock_door_password&#39;</span><span class="p">))</span>
+<span class="k">stop</span> <span class="n">chat</span> <span class="s2">&quot;Click the link to continue&quot;</span>
+</pre></div>
+</div>
+<p>There is also an optional toggle in the <strong>Developer Settings</strong> called <strong>Use pause footer for links</strong> which will show the pause button at the bottom of the screen while waiting for the player to press a link. Note that if you do choose to enable this, it is less clear to the player what they should do to proceed with the story when the chat stops to wait for them to click a link.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you use the <code class="docutils literal notranslate"><span class="pre">JumpVN</span></code> action, the chat will automatically resume after it returns from the VN label. However, if your action is doing something like viewing a CG or setting a variable, you <strong>must</strong> include the action <code class="docutils literal notranslate"><span class="pre">ContinueChat()</span></code> as the final action in your link_action parameter:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="s2">&quot;Add to Contacts&quot;</span> <span class="p">(</span><span class="n">link_title</span><span class="o">=</span><span class="s2">&quot;Contact Info&quot;</span><span class="p">,</span> <span class="n">link_img</span><span class="o">=</span><span class="n">Null</span><span class="p">(),</span>
+    <span class="n">link_action</span><span class="o">=</span><span class="p">[</span><span class="n">CConfirm</span><span class="p">(</span><span class="s2">&quot;Phone number added to contact list.&quot;</span><span class="p">),</span> <span class="n">ContinueChat</span><span class="p">()])</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">CConfirm</span></code> is a special action which shows a confirmation prompt to the user. In this case, it displays the given message and requires the player to press Confirm to dismiss it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="custom-fonts-and-bubbles">
+<h2>Custom Fonts and Bubbles<a class="headerlink" href="#custom-fonts-and-bubbles" title="Permalink to this headline">¶</a></h2>
+<p>Mysterious Messenger supports user-defined fonts and special bubbles through customizable variables and functions. These work with the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS as well as the text tag approach used for the spreadsheet dialogue.</p>
+<div class="section" id="custom-fonts">
+<h3>Custom Fonts<a class="headerlink" href="#custom-fonts" title="Permalink to this headline">¶</a></h3>
+<p>To add your own font to the game, first you need to add it to the <code class="docutils literal notranslate"><span class="pre">all_fonts_list</span></code> found in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">all_fonts_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sser1&#39;</span><span class="p">,</span> <span class="s1">&#39;sser2&#39;</span><span class="p">,</span> <span class="s1">&#39;ser1&#39;</span><span class="p">,</span> <span class="s1">&#39;ser2&#39;</span><span class="p">,</span> <span class="s1">&#39;curly&#39;</span><span class="p">,</span> <span class="s1">&#39;blocky&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In general you should <strong>not</strong> replace this list; just add your new font to the end. For this example, a font called “cursive” will be added.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">all_fonts_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sser1&#39;</span><span class="p">,</span> <span class="s1">&#39;sser2&#39;</span><span class="p">,</span> <span class="s1">&#39;ser1&#39;</span><span class="p">,</span> <span class="s1">&#39;ser2&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;curly&#39;</span><span class="p">,</span> <span class="s1">&#39;blocky&#39;</span><span class="p">,</span> <span class="s1">&#39;cursive&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Now you need to add it to the <code class="docutils literal notranslate"><span class="pre">font_dict</span></code>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">font_dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;curly&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">curly_font</span><span class="p">,</span> <span class="s1">&#39;ser1&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_1</span><span class="p">,</span>
+        <span class="s1">&#39;ser1b&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_1b</span><span class="p">,</span> <span class="s1">&#39;ser1xb&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_1xb</span><span class="p">,</span>
+        <span class="s1">&#39;ser2&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_2</span><span class="p">,</span> <span class="s1">&#39;ser2b&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_2b</span><span class="p">,</span>
+        <span class="s1">&#39;ser2xb&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_2xb</span><span class="p">,</span> <span class="s1">&#39;sser1&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_1</span><span class="p">,</span>
+        <span class="s1">&#39;sser1b&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_1b</span><span class="p">,</span> <span class="s1">&#39;sser1xb&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_1xb</span><span class="p">,</span>
+        <span class="s1">&#39;sser2&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_2</span><span class="p">,</span> <span class="s1">&#39;sser2b&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_2b</span><span class="p">,</span>
+        <span class="s1">&#39;sser2xb&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_2xb</span><span class="p">,</span> <span class="s1">&#39;blocky&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">blocky_font</span><span class="p">,</span>
+        <span class="s1">&#39;cursive&#39;</span> <span class="p">:</span> <span class="s2">&quot;fonts/cursivefont.ttf&quot;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>“fonts/cursivefont.ttf” should be the path to the <code class="docutils literal notranslate"><span class="pre">.ttf</span></code> or <code class="docutils literal notranslate"><span class="pre">.otf</span></code> file of your desired font.</p>
+<p>If your font has bold and/or extra bold variants, you will also add it to the <code class="docutils literal notranslate"><span class="pre">bold_xbold_fonts_list</span></code> variable:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">bold_xbold_fonts_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sser1&#39;</span><span class="p">,</span> <span class="s1">&#39;sser2&#39;</span><span class="p">,</span> <span class="s1">&#39;ser1&#39;</span><span class="p">,</span> <span class="s1">&#39;ser2&#39;</span><span class="p">,</span> <span class="s1">&#39;cursive&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>And you will need to specify how the bold and extra bold variants should be mapped. The bold version of a font is always the name of the font in the <code class="docutils literal notranslate"><span class="pre">all_fonts_list</span></code> + <code class="docutils literal notranslate"><span class="pre">b</span></code>, and the extra bold is the name + <code class="docutils literal notranslate"><span class="pre">xb</span></code>.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">font_dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;curly&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">curly_font</span><span class="p">,</span> <span class="s1">&#39;ser1&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_1</span><span class="p">,</span>
+        <span class="s1">&#39;ser1b&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_1b</span><span class="p">,</span> <span class="s1">&#39;ser1xb&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_1xb</span><span class="p">,</span>
+        <span class="s1">&#39;ser2&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_2</span><span class="p">,</span> <span class="s1">&#39;ser2b&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_2b</span><span class="p">,</span>
+        <span class="s1">&#39;ser2xb&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">serif_2xb</span><span class="p">,</span> <span class="s1">&#39;sser1&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_1</span><span class="p">,</span>
+        <span class="s1">&#39;sser1b&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_1b</span><span class="p">,</span> <span class="s1">&#39;sser1xb&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_1xb</span><span class="p">,</span>
+        <span class="s1">&#39;sser2&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_2</span><span class="p">,</span> <span class="s1">&#39;sser2b&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_2b</span><span class="p">,</span>
+        <span class="s1">&#39;sser2xb&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">sans_serif_2xb</span><span class="p">,</span> <span class="s1">&#39;blocky&#39;</span> <span class="p">:</span> <span class="n">gui</span><span class="o">.</span><span class="n">blocky_font</span><span class="p">,</span>
+        <span class="s1">&#39;cursive&#39;</span> <span class="p">:</span> <span class="s2">&quot;fonts/cursivefont.ttf&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;cursiveb&#39;</span> <span class="p">:</span> <span class="s2">&quot;fonts/cursivefont-bold.ttf&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;cursivexb&#39;</span> <span class="p">:</span> <span class="s2">&quot;fonts/cursivefont-xbold.ttf&quot;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>In this example, the bold is called “cursiveb” and the extra bold “cursivexb”. Note that you will need an entry for <strong>both</strong> bold and extra bold, even if you only have one font. In that case, you can set the file path for both entries to the same font.</p>
+<p>Finally, to use the font as a text tag, you need to define a style for it. Existing styles can be found in <code class="docutils literal notranslate"><span class="pre">style_definitions.rpy</span></code>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">style</span> <span class="n">cursive</span><span class="p">:</span>
+    <span class="na">font</span> <span class="s2">&quot;fonts/cursivefont.ttf&quot;</span>
+
+<span class="k">style</span> <span class="n">cursiveb</span><span class="p">:</span>
+    <span class="na">font</span> <span class="s2">&quot;fonts/cursivefont-bold.ttf&quot;</span>
+
+<span class="k">style</span> <span class="n">cursivexb</span><span class="p">:</span>
+    <span class="na">font</span> <span class="s2">&quot;fonts/cursivefont-xbold.ttf&quot;</span>
+</pre></div>
+</div>
+<p>Now you can use the font while writing chatroom or text message dialogue. If you use the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS, you need to preface the name of the font with the tag <code class="docutils literal notranslate"><span class="pre">font</span></code> e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;This is a new font!&quot;</span> <span class="na">font</span> <span class="n">cursive</span>
+<span class="n">msg</span> <span class="n">s</span> <span class="s2">&quot;You can add other effects, too!&quot;</span> <span class="n">big</span> <span class="na">font</span> <span class="n">cursive</span> <span class="n">xbold</span>
+</pre></div>
+</div>
+<p>And text tags work the way they would with the predefined fonts:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="s2">&quot;{=cursive}This is a bit more verbose.{/=cursive}&quot;</span>
+<span class="n">s</span> <span class="s2">&quot;{=cursivexb}Which method you use depends on your preference.{/=cursivexb}&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="custom-bubbles">
+<h3>Custom Bubbles<a class="headerlink" href="#custom-bubbles" title="Permalink to this headline">¶</a></h3>
+<p>You can also add your own custom bubbles to work with the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS and spreadsheet dialogue method, or expand the functionality of existing bubbles.</p>
+<p>To add a new bubble, first you must add it to the <code class="docutils literal notranslate"><span class="pre">all_bubbles_list</span></code> in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code>. For this example, three bubbles called “spooky_s”, “spooky_m”, and “spooky_l” will be added (for small, medium, and large variants).</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">all_bubbles_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cloud_l&#39;</span><span class="p">,</span> <span class="s1">&#39;cloud_m&#39;</span><span class="p">,</span> <span class="s1">&#39;cloud_s&#39;</span><span class="p">,</span> <span class="s1">&#39;round_l&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;round_m&#39;</span><span class="p">,</span> <span class="s1">&#39;round_s&#39;</span><span class="p">,</span> <span class="s1">&#39;sigh_l&#39;</span><span class="p">,</span> <span class="s1">&#39;sigh_m&#39;</span><span class="p">,</span> <span class="s1">&#39;sigh_s&#39;</span><span class="p">,</span> <span class="s1">&#39;spike_l&#39;</span><span class="p">,</span> <span class="s1">&#39;spike_m&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;spike_s&#39;</span><span class="p">,</span> <span class="s1">&#39;square_l&#39;</span><span class="p">,</span> <span class="s1">&#39;square_m&#39;</span><span class="p">,</span> <span class="s1">&#39;square_s&#39;</span><span class="p">,</span> <span class="s1">&#39;square2_l&#39;</span><span class="p">,</span> <span class="s1">&#39;square2_m&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;square2_s&#39;</span><span class="p">,</span> <span class="s1">&#39;round2_l&#39;</span><span class="p">,</span> <span class="s1">&#39;round2_m&#39;</span><span class="p">,</span> <span class="s1">&#39;round2_s&#39;</span><span class="p">,</span> <span class="s1">&#39;flower_l&#39;</span><span class="p">,</span> <span class="s1">&#39;flower_m&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;flower_s&#39;</span><span class="p">,</span> <span class="s1">&#39;glow2&#39;</span><span class="p">,</span> <span class="s1">&#39;spooky_s&#39;</span><span class="p">,</span> <span class="s1">&#39;spooky_m&#39;</span><span class="p">,</span> <span class="s1">&#39;spooky_l&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Next, you need to define a base style for the bubble. Typically the most important property is the padding. First, define a general style:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">style</span> <span class="n">spooky_s</span><span class="p">:</span>
+    <span class="na">padding</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="k">style</span> <span class="n">spooky_m</span><span class="p">:</span>
+    <span class="na">padding</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="k">style</span> <span class="n">spooky_l</span><span class="p">:</span>
+    <span class="na">padding</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This defines a style for the spooky bubbles with 25 pixels of padding on the left, top, right, and bottom of the bubble. These numbers should, of course, be adjusted to suit the actual bubble image you’re using.</p>
+<p>Next, if any characters have a variant of this bubble that requires different styling, you can define a style for them. For example, if the padding for <code class="docutils literal notranslate"><span class="pre">s</span></code>’s spooky_m bubble is different, you can create an <code class="docutils literal notranslate"><span class="pre">s_spooky_m</span></code> style:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">style</span> <span class="n">s_spooky_m</span><span class="p">:</span>
+    <span class="k">is</span> <span class="n">spooky_m</span> <span class="c1"># This inherits the spooky_m padding</span>
+    <span class="na">top_padding</span> <span class="mi">35</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">spooky_m</span></code> tells the style to inherit from the original <code class="docutils literal notranslate"><span class="pre">spooky_m</span></code> style; this is optional, but can be helpful. In this case, it means that the <code class="docutils literal notranslate"><span class="pre">s_spooky_m</span></code> bubble has a left/right/bottom padding of 25, as in the <code class="docutils literal notranslate"><span class="pre">spooky_m</span></code> style, but the <code class="docutils literal notranslate"><span class="pre">top_padding</span></code> is now 35.</p>
+<p>Finally, you need to define an offset for each of your new bubbles. This is how far the bubble should be relative to the top left corner of the character’s profile picture (for bubbles posted on the left side of the messenger). All the existing bubble offsets can be found in <code class="docutils literal notranslate"><span class="pre">gui.rpy</span></code>. For the <code class="docutils literal notranslate"><span class="pre">spooky_</span></code> bubbles, three variables are needed:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">gui</span><span class="o">.</span><span class="n">spooky_s_offset</span> <span class="o">=</span> <span class="p">(</span><span class="mi">140</span><span class="p">,</span> <span class="mi">38</span><span class="p">)</span>
+<span class="k">define</span> <span class="n">gui</span><span class="o">.</span><span class="n">spooky_m_offset</span> <span class="o">=</span> <span class="p">(</span><span class="mi">130</span><span class="p">,</span> <span class="mi">38</span><span class="p">)</span>
+<span class="k">define</span> <span class="n">gui</span><span class="o">.</span><span class="n">spooky_l_offset</span> <span class="o">=</span> <span class="p">(</span><span class="mi">140</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that these are the name of the bubble + the suffix <code class="docutils literal notranslate"><span class="pre">_offset</span></code>. You can also define specific offsets for characters using their file_id. e.g. if <code class="docutils literal notranslate"><span class="pre">em</span></code>’s spooky_m bubble needs to be a bit further to the right than the rest of the characters’, you can define the value <code class="docutils literal notranslate"><span class="pre">define</span> <span class="pre">gui.em_spooky_m_offset</span> <span class="pre">=</span> <span class="pre">(150,</span> <span class="pre">32)</span></code>.</p>
+<p>And that’s all! To show this special bubble in-game, you must ensure you have the appropriate images defined inside the “Bubbles/Special/” folder.</p>
+<ul class="simple">
+<li><p>The image extension must be one of <code class="docutils literal notranslate"><span class="pre">.webp</span></code>, <code class="docutils literal notranslate"><span class="pre">.png</span></code>, or <code class="docutils literal notranslate"><span class="pre">.jpg</span></code></p></li>
+<li><p>If every character uses the same bubble, it is sufficient to have a “Bubbles/Special/spooky_s.webp” image. Otherwise, you will need an image with the file_id of each character who has a variant e.g. “Bubbles/Special/ja_spooky_s.webp”, “Bubbles/Special/ju_spooky_s.webp”, etc.</p></li>
+</ul>
+<p>Then you can write dialogue which will show the bubble in-game e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">ju</span> <span class="s2">&quot;This will use the spooky_m bubble.&quot;</span> <span class="p">(</span><span class="n">bounce</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">specBubble</span><span class="o">=</span><span class="s2">&quot;spooky_m&quot;</span><span class="p">)</span>
+<span class="n">msg</span> <span class="n">ja</span> <span class="s2">&quot;This message will also use the spooky_m bubble&quot;</span> <span class="n">bubble</span> <span class="n">spooky_m</span>
+</pre></div>
+</div>
+<p>Unlike the predefined bubbles, custom bubbles must be prefixed with <code class="docutils literal notranslate"><span class="pre">bubble</span></code> as in <code class="docutils literal notranslate"><span class="pre">bubble</span> <span class="pre">spooky_m</span></code> when used in the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also add the name of your bubble to the <code class="docutils literal notranslate"><span class="pre">hourglass_bubbles</span></code> variable in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code>. This means that when a character uses that bubble in-game, it has a chance of awarding the player an hourglass.</p>
+<p>Typically only the large (<code class="docutils literal notranslate"><span class="pre">l</span></code>) version of a bubble is added to this list e.g. <code class="docutils literal notranslate"><span class="pre">&quot;spooky_l&quot;</span></code></p>
+</div>
+</div>
+<div class="section" id="extending-custom-bubbles">
+<h3>Extending Custom Bubbles<a class="headerlink" href="#extending-custom-bubbles" title="Permalink to this headline">¶</a></h3>
+<p>Besides adding your own bubbles, you can also extend the functionality of existing bubbles (or your own custom bubbles) via some special provided functions in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code>. There are three such functions. All are passed a <code class="docutils literal notranslate"><span class="pre">msg</span></code> variable, which is a ChatEntry object with the following fields:</p>
+<dl>
+<dt><cite>who</cite></dt><dd><p>The ChatCharacter object of the sender of the message.</p>
+<p>e.g. <code class="docutils literal notranslate"><span class="pre">s</span></code></p>
+</dd>
+<dt><cite>what</cite></dt><dd><p>The contents (dialogue) of the message.</p>
+<p>e.g. “Have you heard from V lately?”</p>
+</dd>
+<dt><cite>thetime</cite></dt><dd><p>A MyTime object with information on the time the message was sent at (in real-time)</p>
+</dd>
+<dt><cite>img</cite></dt><dd><p>True if this message contains either an emoji or a CG; False otherwise.</p>
+</dd>
+<dt><cite>bounce</cite></dt><dd><p>True if this message should “bounce” in as its animation. This is True if the message uses the “glowing” style of bubble, and also True if a special speech bubble is used (such as “cloud_m”). It is generally False for images and the default speech bubble.</p>
+</dd>
+<dt><cite>specBubble</cite></dt><dd><p>The special bubble. Typically this is equal to somethingn like “sigh_s” or “spike_l”. However, you can pass in particular strings and use this function to take care of what background image it should evaluate to.</p>
+</dd>
+</dl>
+<div class="section" id="custom-bubble-background-function">
+<h4>Custom Bubble Background Function<a class="headerlink" href="#custom-bubble-background-function" title="Permalink to this headline">¶</a></h4>
+<p>Inside <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code> is a function called <code class="docutils literal notranslate"><span class="pre">custom_bubble_bg</span></code> under the <strong>CUSTOM MESSENGER ITEMS</strong> header. Each chatroom message is passed to this function, which allows you a chance to check for certain conditions and return particular bubble backgrounds.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You must ensure any new bubbles you allow characters to use (such as a third glowing bubble variant) are added to the <code class="docutils literal notranslate"><span class="pre">all_bubbles_list</span></code> and have styles defined for them as described above, and aren’t just defined in the custom bubble function.</p>
+</div>
+<p>You can also return general displayables, such as a Frame(), inside the <code class="docutils literal notranslate"><span class="pre">custom_bubble_bg</span></code> function. For example, you could give Emma (from the new character examples) a second “glowing” bubble variant:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">custom_bubble_bg</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">who</span><span class="o">.</span><span class="n">file_id</span> <span class="o">==</span> <span class="s2">&quot;em&quot;</span> <span class="k">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">specBubble</span> <span class="o">==</span> <span class="s2">&quot;glow2&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Frame</span><span class="p">(</span><span class="s2">&quot;Bubble/Special/em_glow2.webp&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>This returns the “Bubble/Special/em_glow2.webp” image, formatted as a frame with borders 25 pixels wide. The inside of the bubble will expand to be large enough to accommodate the text (this is how the regular speech bubbles and glowing bubble variants are defined and used).</p>
+<p>You could then write dialogue to use this bubble like:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">em</span> <span class="s2">&quot;This goes in my glowing bubble.&quot;</span> <span class="p">(</span><span class="n">bounce</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">specBubble</span><span class="o">=</span><span class="s2">&quot;glow2&quot;</span><span class="p">)</span>
+<span class="n">msg</span> <span class="n">em</span> <span class="s2">&quot;As does this message.&quot;</span> <span class="n">bubble</span> <span class="n">glow2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="custom-bubble-style-function">
+<h4>Custom Bubble Style Function<a class="headerlink" href="#custom-bubble-style-function" title="Permalink to this headline">¶</a></h4>
+<p>Although the program will try to pick out specific styles based on the name of the special speech bubble used, there may be some cases in which you want to apply a particular style to a bubble. The <code class="docutils literal notranslate"><span class="pre">custom_bubble_style</span></code> function in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code> will let you return a particular style.</p>
+<p>For example, you might want to apply special styling to <code class="docutils literal notranslate"><span class="pre">em</span></code>’s second glowing bubble variant from the last example:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">custom_bubble_style</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">who</span><span class="o">.</span><span class="n">file_id</span> <span class="o">==</span> <span class="s2">&quot;em&quot;</span> <span class="k">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">specBubble</span> <span class="o">==</span> <span class="s2">&quot;glow2&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;em_glow2_style&quot;</span>
+
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">style</span> <span class="n">em_glow2_style</span><span class="p">:</span>
+    <span class="na">padding</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function should return a string that corresponds to the name of a style. For example, if you want a bubble to use the style <code class="docutils literal notranslate"><span class="pre">style</span> <span class="pre">my_special_bubble</span></code>, then you need to return the string <code class="docutils literal notranslate"><span class="pre">&quot;my_special_bubble&quot;</span></code>.</p>
+</div>
+<div class="section" id="custom-bubble-offset-function">
+<h4>Custom Bubble Offset Function<a class="headerlink" href="#custom-bubble-offset-function" title="Permalink to this headline">¶</a></h4>
+<p>This function allows you to fine-tune the offset of a message, relative to the top-left corner of the message box (typically the top-left corner of the character’s profile picture). For example, if you wanted to use special speech bubbles for the character on the right side of the messenger (typically the MC), you would need to adjust these values appropriately. This function is expected to return either False or a tuple of (x, y) integers for the position of this bubble.</p>
+<p>An example utilizing all three custom functions that allows the right messenger to use Jumin’s large and medium-sized “cat” bubbles might look like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">custom_bubble_bg</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="c1"># If the messenger is on the right side (usually the player), flip</span>
+    <span class="c1"># the background of the special cat bubble</span>
+    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">who</span><span class="o">.</span><span class="n">right_msgr</span> <span class="k">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">specBubble</span> <span class="o">==</span> <span class="s2">&quot;ju_cloud_l&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Transform</span><span class="p">(</span><span class="s2">&quot;Bubble/Special/ju_cloud_l.webp&quot;</span><span class="p">,</span> <span class="na">xzoom</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">msg</span><span class="o">.</span><span class="n">who</span><span class="o">.</span><span class="n">right_msgr</span> <span class="k">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">specBubble</span> <span class="o">==</span> <span class="s2">&quot;ju_cloud_m&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Transform</span><span class="p">(</span><span class="s2">&quot;Bubble/Special/ju_cloud_m.webp&quot;</span><span class="p">,</span> <span class="na">xzoom</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">custom_bubble_offset</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="c1"># If the messenger is on the right side, adjust the offset for</span>
+    <span class="c1"># the two cat bubbles</span>
+    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">who</span><span class="o">.</span><span class="n">right_msgr</span> <span class="k">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">specBubble</span> <span class="o">==</span> <span class="s2">&quot;ju_cloud_l&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">650</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">msg</span><span class="o">.</span><span class="n">who</span><span class="o">.</span><span class="n">right_msgr</span> <span class="k">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">specBubble</span> <span class="o">==</span> <span class="s2">&quot;ju_cloud_m&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">39</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">custom_bubble_style</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="c1"># Ensure the bubbles use their original styling rather than styling</span>
+    <span class="c1"># for the main character&#39;s bubbles</span>
+    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">who</span><span class="o">.</span><span class="n">right_msgr</span> <span class="k">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">specBubble</span> <span class="o">==</span> <span class="s2">&quot;ju_cloud_m&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;ju_cloud_m&#39;</span>
+    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">who</span><span class="o">.</span><span class="n">right_msgr</span> <span class="k">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">specBubble</span> <span class="o">==</span> <span class="s2">&quot;ju_cloud_l&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;ju_cloud_l&#39;</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="adding-chatroom-backgrounds">
+<h2>Adding Chatroom Backgrounds<a class="headerlink" href="#adding-chatroom-backgrounds" title="Permalink to this headline">¶</a></h2>
+<p>Chatroom backgrounds must be defined in a particular way in order to be compatible with the <code class="docutils literal notranslate"><span class="pre">scene</span></code> and <code class="docutils literal notranslate"><span class="pre">show</span></code> statements to display them.</p>
+<p>Existing background options are:</p>
+<ul class="simple">
+<li><p>morning</p></li>
+<li><p>noon</p></li>
+<li><p>evening</p></li>
+<li><p>night</p></li>
+<li><p>earlyMorn</p></li>
+<li><p>hack</p></li>
+<li><p>redhack</p></li>
+<li><p>redcrack</p></li>
+<li><p>secure</p></li>
+<li><p>rainy_day</p></li>
+<li><p>snowy_day</p></li>
+<li><p>morning_snow</p></li>
+</ul>
+<p>The background names <strong>are</strong> case-sensitive, so you need to get the capitalization correct.</p>
+<p>For this example, you’ll see how the <code class="docutils literal notranslate"><span class="pre">rainy_day</span></code> background was set up.</p>
+<p>To add a new background, inside <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code> under the header <strong>CUSTOM MESSENGER ITEMS</strong> are several variables. First, you need to define the image that will be used as the background. This should be <code class="docutils literal notranslate"><span class="pre">bg</span></code> + the name of the image as you want to write when displaying it in a chatroom:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">image</span> <span class="n">bg</span> <span class="n">rainy_day</span> <span class="o">=</span> <span class="s2">&quot;center_bg:Phone UI/bg_rainy_day.webp&quot;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">center_bg:</span></code> before the file path to the image file itself is optional, but will center the image on the screen if it is not exactly 750x1334 pixels. If your image is exactly 750x1334 pixels, then just <code class="docutils literal notranslate"><span class="pre">image</span> <span class="pre">bg</span> <span class="pre">rainy_day</span> <span class="pre">=</span> <span class="pre">&quot;Phone</span> <span class="pre">UI/bg_rainy_day.webp&quot;</span></code> would be sufficient.</p>
+<p>You can put this image definition wherever you like, though it may make sense to keep it under the <strong>CUSTOM MESSENGER ITEMS</strong> header alongside the background variable definitions.</p>
+<p>Next, add the background name to the <code class="docutils literal notranslate"><span class="pre">all_static_backgrounds</span></code> list:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">all_static_backgrounds</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;morning&#39;</span><span class="p">,</span> <span class="s1">&#39;noon&#39;</span><span class="p">,</span> <span class="s1">&#39;evening&#39;</span><span class="p">,</span> <span class="s1">&#39;hack&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;redhack&#39;</span><span class="p">,</span> <span class="s1">&#39;night&#39;</span><span class="p">,</span> <span class="s1">&#39;earlyMorn&#39;</span><span class="p">,</span> <span class="s1">&#39;redcrack&#39;</span><span class="p">,</span> <span class="s1">&#39;secure&#39;</span><span class="p">,</span> <span class="s1">&#39;rainy_day&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Note that you do <strong>not</strong> add the “bg” part to the name of your background.</p>
+<p>Next, if the characters’ names should appear in black during a chatroom (as is typical of the lighter backgrounds, such as “morning” and “noon”), you also need to add it to the <code class="docutils literal notranslate"><span class="pre">black_text_bgs</span></code> list:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">black_text_bgs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;morning&#39;</span><span class="p">,</span> <span class="s1">&#39;noon&#39;</span><span class="p">,</span> <span class="s1">&#39;evening&#39;</span><span class="p">,</span> <span class="s1">&#39;rainy_day&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Otherwise, if the background is not in this list, the characters’ names will be displayed in white.</p>
+<div class="section" id="adding-an-animated-background">
+<h3>Adding an Animated Background<a class="headerlink" href="#adding-an-animated-background" title="Permalink to this headline">¶</a></h3>
+<p>If you would also like to add an animated version of your new background, you need to define a specific screen for it. First, however, you will add the background to the <code class="docutils literal notranslate"><span class="pre">all_animated_backgrounds</span></code> list in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">all_animated_backgrounds</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;morning&#39;</span><span class="p">,</span> <span class="s1">&#39;noon&#39;</span><span class="p">,</span> <span class="s1">&#39;evening&#39;</span><span class="p">,</span> <span class="s1">&#39;night&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;earlyMorn&#39;</span><span class="p">,</span> <span class="s1">&#39;rainy_day&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Next, you need to define the screen which will have the animated background. The existing backgrounds are defined in <code class="docutils literal notranslate"><span class="pre">screens_backgrounds.rpy</span></code>.</p>
+<p>Because the new background is called “rainy_day”, you need to create a new screen called <code class="docutils literal notranslate"><span class="pre">animated_rainy_day</span></code>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="n">animated_rainy_day</span><span class="p">():</span>
+    <span class="k">zorder</span> <span class="mi">0</span>
+    <span class="k">tag</span> <span class="n">animated_bg</span>
+
+    <span class="c1"># add images here</span>
+</pre></div>
+</div>
+<p>You <strong>must</strong> include the lines <code class="docutils literal notranslate"><span class="pre">zorder</span> <span class="pre">0</span></code> (to ensure the animated backgrounds appears behind other screen elements) and <code class="docutils literal notranslate"><span class="pre">tag</span> <span class="pre">animated_bg</span></code> (to ensure only one animated background is shown at once, and so that the background is properly cleared at the end of a chatroom).</p>
+<p>You can then add animated elements to the screen. For a rainy day background, for example, you might take advantage of the existing <code class="docutils literal notranslate"><span class="pre">slow_pan</span></code> transform for clouds, and perhaps add raindrops which fall from the top of the screen to the bottom. As the exact requirements for a given animated background will vary substantially depending on what sort of background you want to add, this part is largely up to your own skill with screen language. You can see how the existing animated backgrounds are put together in the <code class="docutils literal notranslate"><span class="pre">screens_backgrounds.rpy</span></code> file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you would like to include an animated background, it must have a corresponding “static” version that can be displayed to users who don’t have animated backgrounds turned on.</p>
+</div>
+</div>
+</div>
+<div class="section" id="timed-menus">
+<h2>Timed Menus<a class="headerlink" href="#timed-menus" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Example files to look at:</p>
+<ul class="simple">
+<li><p>tutorial_5_coffee.rpy</p></li>
+<li><p>tutorial_6_meeting.rpy</p></li>
+</ul>
+</div>
+<p>Mysterious Messenger includes a new kind of menu which will display answers at the bottom of the screen for a brief period of time while the characters continue to post messages to the chat. The player can choose an answer at any time before the timer runs out, or refrain from choosing anything and stay silent. The time the player has to choose a reply depends on the length of the dialogue before the menu. Currently, this type of menu is <strong>only</strong> available for chatrooms.</p>
+<p>An example timed menu may look like the following:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="s2">&quot;Hello, [name]!&quot;</span>
+<span class="n">timed</span> <span class="k">menu</span><span class="p">:</span>
+    <span class="n">u</span> <span class="s2">&quot;I&#39;m working on a UI for the choices you see at the bottom of the screen.&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;It&#39;s typed almost identically to regular menus this time,&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;but with some convenience features I think you&#39;ll like.&quot;</span>
+    <span class="n">u</span> <span class="s2">&quot;You should try clicking the options before the timer runs out.&quot;</span>
+    <span class="s2">&quot;This is really neat!&quot;</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;I&#39;m glad you think so!&quot;</span> <span class="n">curly</span>
+        <span class="n">award</span> <span class="n">heart</span> <span class="n">u</span>
+    <span class="s2">&quot;Does it remember choices?&quot;</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;Yes it does!&quot;</span> <span class="n">bounce</span> <span class="n">big</span> <span class="n">curly</span>
+        <span class="n">award</span> <span class="n">heart</span> <span class="n">u</span>
+        <span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;And you can use regular Ren&#39;Py code in the choices&quot;</span>
+        <span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;to do things like award heart points and the like.&quot;</span> <span class="n">curly</span>
+<span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;You can choose an answer any time while the choices are on-screen,&quot;</span>
+<span class="n">msg</span> <span class="n">u</span> <span class="s2">&quot;Or just let the timer run out to stay silent, too.&quot;</span>
+</pre></div>
+</div>
+<p>Timed menus are written almost identically to regular Ren’Py menus, but you can add as many lines of dialogue before the first choice as you like. The choices included in the menu will be on-screen while the dialogue after the <code class="docutils literal notranslate"><span class="pre">timed</span> <span class="pre">menu:</span></code> statement is shown.</p>
+<p>The dialogue for the menu can be written using the <code class="docutils literal notranslate"><span class="pre">msg</span></code> CDS or the spreadsheet format. You can also include other regular scripting lines, such as characters entering/exiting chatrooms, inviting guests, or awarding heart points. You can include conditional statements inside the menu dialogue or on choices themselves e.g.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">ju</span> <span class="s2">&quot;[name], do you own a cat?&quot;</span>
+<span class="k">menu</span><span class="p">:</span>
+    <span class="s2">&quot;No.&quot;</span><span class="p">:</span>
+        <span class="k">$</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="s2">&quot;I do.&quot;</span><span class="p">:</span>
+        <span class="k">$</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">ju</span> <span class="s2">&quot;I see. Cats are wonderful creatures, aren&#39;t they?&quot;</span>
+<span class="n">timed</span> <span class="k">menu</span><span class="p">:</span>
+    <span class="n">ju</span> <span class="s2">&quot;Elizabeth the 3rd has been a constant source of joy in my life&quot;</span>
+    <span class="k">if</span> <span class="n">owns_cat</span><span class="p">:</span>
+        <span class="n">ju</span> <span class="s2">&quot;as I&#39;m sure your cat is in yours.&quot;</span>
+    <span class="n">ju</span> <span class="s2">&quot;It&#39;s a shame some may never know the joy of owning a cat.&quot;</span>
+    <span class="s2">&quot;Some people are allergic though, like Zen.&quot;</span><span class="p">:</span>
+        <span class="n">ju</span> <span class="s2">&quot;That is true.&quot;</span>
+        <span class="n">ju</span> <span class="s2">&quot;I believe that can be overcome with appropriate medication.&quot;</span>
+    <span class="s2">&quot;I don&#39;t know what I&#39;d do without my cat&quot;</span> <span class="k">if</span> <span class="n">owns_cat</span><span class="p">:</span>
+        <span class="n">ju</span> <span class="s2">&quot;May the two of you never have to be parted, then.&quot;</span>
+    <span class="s2">&quot;I think dogs are better, though.&quot;</span><span class="p">:</span>
+        <span class="n">ju</span> <span class="s2">&quot;Hmm. I don&#39;t agree but I will respect your opinion.&quot;</span>
+</pre></div>
+</div>
+<p>For this menu, the line “as I’m sure your cat is in yours” only appears to a player who previously answered that they own a cat. Similarly, a player who didn’t say they own a cat will not see the choice “I don’t know what I’d do without my cat”.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Since the choices for a timed menu are smaller, it’s often a good idea to either paraphrase the choices and/or keep the amount of text for each choice caption short. A maximum of three choices can appear on the screen at once for a timed menu.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While you can use Python statements inside timed menus, such as <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">owns_cat</span> <span class="pre">=</span> <span class="pre">True</span></code>, you <strong>should not change the value of variables that are used in the menu</strong>, such as in conditionals. This will cause undefined behaviour. So, the following is <strong>incorrect</strong>:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">timed</span> <span class="k">menu</span><span class="p">:</span>
+    <span class="n">ju</span> <span class="s2">&quot;I believe you mentioned you own a cat, [name]?&quot;</span>
+    <span class="k">$</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">ju</span> <span class="s2">&quot;They are wonderful companions.&quot;</span>
+    <span class="s2">&quot;Yeah I do own a cat&quot;</span> <span class="k">if</span> <span class="n">owns_cat</span><span class="p">:</span>
+        <span class="n">ju</span> <span class="s2">&quot;I see.&quot;</span>
+    <span class="s2">&quot;I don&#39;t have a cat&quot;</span> <span class="k">if</span> <span class="k">not</span> <span class="n">owns_cat</span><span class="p">:</span>
+        <span class="n">ju</span> <span class="s2">&quot;Oh, I was mistaken.&quot;</span>
+</pre></div>
+</div>
+<p>Because <code class="docutils literal notranslate"><span class="pre">owns_cat</span></code> was set to True inside the menu itself, its initial value before the menu (False) is used and it will be impossible for the player to ever see the “Yeah I do own a cat” choice, even if they see all the timed menu dialogue.</p>
+<p>You can, however, set variables inside the menu provided they are not used in that same menu. So, the following is acceptable:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># These variables are set up outside the menu in the case that the player</span>
+<span class="c1"># doesn&#39;t see the full menu</span>
+<span class="k">$</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">$</span> <span class="n">answered_jumin</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">timed</span> <span class="k">menu</span><span class="p">:</span>
+    <span class="n">ju</span> <span class="s2">&quot;Do you own a cat, [name]?&quot;</span>
+    <span class="n">ju</span> <span class="s2">&quot;Elizabeth the 3rd has been a constant source of joy in my life&quot;</span>
+    <span class="n">ju</span> <span class="s2">&quot;It&#39;s a shame some may never know the joy of owning a cat.&quot;</span>
+    <span class="k">$</span> <span class="n">answered_jumin</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="s2">&quot;I have a cat.&quot;</span><span class="p">:</span>
+        <span class="k">$</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">$</span> <span class="n">answered_jumin</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">ju</span> <span class="s2">&quot;You&#39;re someone of excellent taste, I see.&quot;</span>
+    <span class="s2">&quot;I don&#39;t have a cat.&quot;</span><span class="p">:</span>
+        <span class="k">$</span> <span class="n">owns_cat</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">$</span> <span class="n">answered_jumin</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">ju</span> <span class="s2">&quot;Ah, that is most unfortunate then.&quot;</span>
+<span class="k">if</span> <span class="k">not</span> <span class="n">answered_jumin</span><span class="p">:</span>
+    <span class="c1"># The player didn&#39;t reply to the timed menu</span>
+    <span class="n">ju</span> <span class="s2">&quot;I apologize if that was an overly personal question.&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="timed-menu-settings">
+<h3>Timed Menu Settings<a class="headerlink" href="#timed-menu-settings" title="Permalink to this headline">¶</a></h3>
+<p>There are two options in the settings that affect timed menus. Both are found under the Preferences tab. The first is <strong>Timed Menu Speed</strong>, a slider at the top of the screen. Clicking the title will cause the timed menu speed to be set to your current chatroom speed. Moving the slider further to the left will slow timed menus down (giving the player more time to reply), and moving the slider further to the right will speed timed menus up.</p>
+<p>This creates a sort of “bullet time” for timed menus, where the regular chat speed may be very fast, but the timed menus will slow down to give the player time to read the messages and possible responses before deciding what to do.</p>
+<p>The second option is under <strong>Accessibility Options</strong> and allows the player to toggle timed menus off altogether. If timed menus are turned off, the menu will act like a regular menu. All of the dialogue before the choices will be shown, and then the player will be presented with the “answer” button at the bottom of the screen. They will be able to choose between any of the given answers, or use a special choice that will be shown as “(Say nothing)” and will function as though the timer on the menu ran out without the player responding.</p>
+<p>Keep these options in mind when using timed menus in your script, as not all players will want to keep them turned on.</p>
+</div>
+<div class="section" id="timed-menu-functionality">
+<h3>Timed Menu Functionality<a class="headerlink" href="#timed-menu-functionality" title="Permalink to this headline">¶</a></h3>
+<p>There are a few special things to note about timed menus:</p>
+<ul>
+<li><p>The time the player has to answer the timed menu depends on what the <strong>Timed Menu Speed</strong> slider in the settings is set to. By default this is set to the equivalent of SPEED 5 in the chatrooms.</p></li>
+<li><p>The timed menu’s timer will expire after all the dialogue inside the menu before the choices has been posted. How long it takes to post all the messages depends on the <strong>Timed Menu Speed</strong> as mentioned above. So, regardless of the player’s chat speed or timed menu speed, they will always have enough time to view all the dialogue inside a menu before choosing an answer.</p></li>
+<li><p>If a player is on Max Speed, the timed menu will be skipped entirely. The dialogue will be posted, but there will be no choices at the bottom of the screen and the program will act as though the player did not reply.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>However, if the player has timed menus turned off, the answer button will still appear at the bottom of the screen and allow the player to choose an answer (or choose to remain silent)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>If a player chooses an answer before all the menu dialogue has been posted, they will not be able to see the rest of the menu dialogue.</p></li>
+<li><p>If a player replays a chatroom with timed menus from the History screen, it will always act as though the Timed Menus option is turned <strong>off</strong>; that is, the chat will always stop at the end of the timed menu dialogue and show the answer button to allow the player to pick a response they have previously seen in-game.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the player has never chosen any of the menu choices in a past playthrough, the answer button and choices will not appear at all (since the only option would be to remain silent). The menu dialogue will be posted and the chat will simply move on.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>If all the choices in the menu have a conditional dictating when they should be shown (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;I</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">visit</span> <span class="pre">Seven&quot;</span> <span class="pre">if</span> <span class="pre">s.heart_points</span> <span class="pre">&gt;</span> <span class="pre">10:</span></code>) and none of those conditions evaluate to True (that is, none of the choices should be shown to the player because they don’t meet the conditions), then the menu dialogue will be shown only if <code class="docutils literal notranslate"><span class="pre">show_empty_menus</span></code> is True. This variable can be found in <code class="docutils literal notranslate"><span class="pre">variables_editable.rpy</span></code> and is True by default. If set to False, if a menu has no valid choices then the menu dialogue will be skipped altogether and the chat will continue after the menu.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="chatroom-creator">
+<h2>Chatroom Creator<a class="headerlink" href="#chatroom-creator" title="Permalink to this headline">¶</a></h2>
+<p>While scripting chatrooms yourself will allow for the greatest flexibility and allow you to create entire routes inside Mysterious Messenger, the program also offers the <strong>Chatroom Creator</strong> to visually put together chatrooms and watch them play out or export them to code.</p>
+<p>To access the Chatroom Creator, head to <strong>Developer</strong> options on the main menu and select the <strong>Chatroom Creator</strong> button. You will then see a sub-menu to either create a new chat or load an existing one.</p>
+<div class="section" id="creating-a-new-chat">
+<h3>Creating a New Chat<a class="headerlink" href="#creating-a-new-chat" title="Permalink to this headline">¶</a></h3>
+<p>Upon creating a new chat, you will be prompted to enter a title for the chatroom. This will be recorded on the save screen, and is also used to auto-generate the label and title of the chatroom when exporting it to code. You can change this later in the <strong>Other</strong> tab of the creator.</p>
+</div>
+<div class="section" id="the-dialogue-tab">
+<h3>The Dialogue Tab<a class="headerlink" href="#the-dialogue-tab" title="Permalink to this headline">¶</a></h3>
+<p>There are several tabs in the chatroom creator. The first one contains several features for adding basic chat messages.</p>
+<p>You can select the person who sends the message by clicking the <strong>Speaker</strong> dropdown. This is also the person who will enter/exit the chatroom if you click the <strong>Add Enter Msg</strong> or <strong>Add Exit Msg</strong> buttons (e.g. if the speaker is 707, <strong>Add Enter Msg</strong> will add the message <strong>707 has entered the chatroom</strong> to the chat).</p>
+<p>Next there are several buttons to toggle <strong>Bold</strong>, <em>Italics</em>, Underline, decrease/increase or reset the text size, and an additional dropdown for <strong>Fonts</strong>. You will be able to see these changes reflected in the text inside the text box.</p>
+<p>To add a message to the chat, choose your speaker and add any font options, then click the text box to enter your dialogue. You can either hit <strong>Enter</strong> on your keyboard or <strong>Add to Chat</strong> in the bottom right corner to add the dialogue to the chat.</p>
+<p>If you make a mistake, the <strong>Undo</strong> button at the bottom of the <strong>Dialogue</strong> tab will allow you to undo up to 5 messages. <strong>Redo</strong> will redo messages you previously undid.</p>
+<p>Lastly, <strong>Clear Chat</strong> will remove all messages from the chatlog. Use this only if you want to completely start over.</p>
+<div class="section" id="undo-redo">
+<h4>Undo &amp; Redo<a class="headerlink" href="#undo-redo" title="Permalink to this headline">¶</a></h4>
+<p>On the <strong>Dialogue</strong> tab beneath the text input box, there are also buttons to <strong>Clear Chat</strong>, <strong>Undo</strong>, and <strong>Redo</strong>. Note that undo &amp; redo only go back <strong>5 changes</strong> in the past - so save often to be safe!</p>
+<p><strong>Clear Chat</strong> will ask for confirmation before clearing all of the messages from the chatlog to start completely from scratch. Note that while this can be undone, it’s a good idea to be really sure you want to clear the chat before clicking this option!</p>
+</div>
+</div>
+<div class="section" id="the-effects-tab">
+<h3>The Effects Tab<a class="headerlink" href="#the-effects-tab" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="emojis">
+<h4>Emojis<a class="headerlink" href="#emojis" title="Permalink to this headline">¶</a></h4>
+<p>To add emojis to the chat, use the <strong>Add Emoji</strong> button under the <strong>Effects</strong> tab. This will initially bring up all of the emojis available to the current speaker. You can select one of these emojis and click <strong>Confirm</strong> to add it to the chat, or click the <strong>X</strong> in the top-right corner to cancel.</p>
+<p>At the top of the Emojis popup are two dropdowns: <strong>Emojis</strong> and <strong>Speaker</strong>.</p>
+<ul class="simple">
+<li><p><strong>Emojis</strong> changes the set of emojis shown which can be selected to add to the chat</p></li>
+<li><p><strong>Speaker</strong> changes the character who will send the message</p></li>
+</ul>
+<p>Note that the <strong>Speaker</strong> and <strong>Emojis</strong> do not have to be the same person. If you select a different person’s <strong>Emojis</strong> to be shown, the speaker will be updated to that person. However, you can then update the <strong>Speaker</strong> to someone else.</p>
+<p>For example, if you wanted 707 to send V’s emojis, you would first set <strong>Emojis</strong> to <strong>V</strong> to see V’s emojis. Then you would change <strong>Speaker</strong> to <strong>707</strong>, select one of V’s emojis, and click <strong>Confirm</strong>.</p>
+</div>
+<div class="section" id="id1">
+<h4>Special Bubbles<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>To use special bubbles in the background of a message, use the <strong>Special Bubbles</strong> button under the <strong>Effects</strong> tab.</p>
+<p>This will bring up a popup showing the available bubbles to use. At the top of the Special Bubbles popup there are two dropdowns: <strong>Bubbles</strong> and <strong>Speaker</strong>.</p>
+<ul class="simple">
+<li><p><strong>Bubbles</strong> changes the set of special bubbles that can be selected to add to the chat</p></li>
+<li><p><strong>Speaker</strong> changes the character who will send the message</p></li>
+</ul>
+<p>As with emojis, the <strong>Speaker</strong> and <strong>Bubbles</strong> do not have to be the same person. If you select a different Speaker, the bubbles will be updated to that person. However, you can then update the <strong>Bubbles</strong> to someone else.</p>
+<p>For example, if you wanted 707 to send Jumin’s cat bubble, you would select <strong>707</strong> as the speaker, then select <strong>Jumin Han</strong> under the <strong>Bubbles</strong> dropdown and select the appropriate bubble.</p>
+<p>When you click a bubble, in most cases you will be given a small popup letting you choose the size of the bubble. After selecting this, you can hit <strong>Confirm</strong> and the current dialogue in the dialogue box will be posted to the chat with the selected background.</p>
+</div>
+<div class="section" id="screen-shake">
+<h4>Screen Shake<a class="headerlink" href="#screen-shake" title="Permalink to this headline">¶</a></h4>
+<p>To make the screen shake, on the <strong>Effects</strong> tab, you can click <strong>Add Shake</strong>. This will display a message in the chatlog to indicate where the screen shake will occur.</p>
+</div>
+<div class="section" id="animations">
+<h4>Animations<a class="headerlink" href="#animations" title="Permalink to this headline">¶</a></h4>
+<p>To add animations such as the scrolling hack effects or secure chatroom animation, under the <strong>Effects</strong> tab click <strong>Add Animations</strong> and select the animation you would like to add.</p>
+<p>For the scrolling hack effects, you will also have the option to <em>reverse</em> the animation by checking the <strong>Reverse Animation</strong> box before clicking <strong>Confirm</strong>. A message will appear in the chatlog indicating where this animation will play.</p>
+</div>
+</div>
+<div class="section" id="the-other-tab">
+<h3>The Other Tab<a class="headerlink" href="#the-other-tab" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="select-background">
+<h4>Select Background<a class="headerlink" href="#select-background" title="Permalink to this headline">¶</a></h4>
+<p>To change the chat background, go to the <strong>Other</strong> tab and click <strong>Select Background</strong>. You’ll also have the option to include the cracked screen overlay by checking that option at the bottom. Note that this applies to all backgrounds for the duration of this chatroom.</p>
+<p>By default this background will appear after the last message added to the chatlog, but you can force it to be set up at the start of the chatroom by checking <strong>Add to the beginning of the chat</strong>. A message will be displayed in the chatlog to indicate where the background will be changed.</p>
+</div>
+<div class="section" id="add-music">
+<h4>Add Music<a class="headerlink" href="#add-music" title="Permalink to this headline">¶</a></h4>
+<p>To add music to the chat, on the <strong>Other</strong> tab select the button <strong>Add Music</strong>. Here you’ll see a list of available songs to add to the game.</p>
+<p>Select a song and click <strong>Confirm</strong> to add it to the chat. A message will appear indicating when the song will begin playing. You can also force the song to start at the beginning of the chat by checking <strong>Add to the beginning of the chat</strong> above the <strong>Confirm</strong> button.</p>
+</div>
+<div class="section" id="add-participants">
+<h4>Add Participants<a class="headerlink" href="#add-participants" title="Permalink to this headline">¶</a></h4>
+<p>To select who begins in the chatroom, on the <strong>Other</strong> tab, select the button <strong>Add Participants</strong>. Here you’ll see a list of all characters currently in the game. You can check off who begins in the chatroom and hit <strong>Confirm</strong>.</p>
+<p>Note that this only dictates whose name appears as in the chatroom at the top of the screen during a chatroom. If you use the enter/exit messages, characters will still appear/disappear from that list accordingly.</p>
+</div>
+<div class="section" id="play-chat">
+<h4>Play Chat<a class="headerlink" href="#play-chat" title="Permalink to this headline">¶</a></h4>
+<p>Clicking <strong>Play Chat</strong> on the <strong>Other</strong> tab will let you play out the chatroom as if it had been in-game. Any messages like <code class="docutils literal notranslate"><span class="pre">Play</span> <span class="pre">Music:</span> <span class="pre">Mint</span> <span class="pre">Eye</span></code> will play as they should in this format (as opposed to it appearing as text). You can use the toggles in the settings at the top-right of the chat creator to turn on/off things like animated backgrounds and the hacking effects as well, which will affect how the chat looks when it’s played out.</p>
+</div>
+<div class="section" id="generate-code">
+<h4>Generate Code<a class="headerlink" href="#generate-code" title="Permalink to this headline">¶</a></h4>
+<p>Clicking <strong>Generate Code</strong> on the <strong>Other</strong> tab will generate a <code class="docutils literal notranslate"><span class="pre">.rpy</span></code> file inside the <code class="docutils literal notranslate"><span class="pre">game/generated/</span></code> folder with the chatroom formatted into code you can put into the program. There are several features the program supports which the chatroom creator does not, such as providing choice menus or jumping to story mode in the middle of a chatroom. If you’d like to use these features, you can use the chatroom creator to build the base of your chatroom before exporting it to code to add these additional features.</p>
+<p>Note that the name of the file and associated labels will take the name of the chatroom, as provided when you first made the chat. If you click <strong>Generate Code</strong> when a file with the same name exists in the <code class="docutils literal notranslate"><span class="pre">generated</span></code> folder, you will be prompted if you would like to <strong>overwrite</strong> this file. Keep this in mind if you’ve made changes to the code outside of the chatroom creator, as that will not be reflected in the chatroom creator.</p>
+<p>You can rename the chatroom using the <strong>Rename Chat</strong> button on the <strong>Other</strong> tab.</p>
+<p>The generated code will include a label for your chatroom, an <code class="docutils literal notranslate"><span class="pre">after_</span></code> label, optionally for adding things like text messages etc, and a <code class="docutils literal notranslate"><span class="pre">ChatRoom</span></code> definition for your chatroom that you can use as part of a route definition. Note that you will need to fill in the trigger time yourself; it defaults to <code class="docutils literal notranslate"><span class="pre">00:00</span></code> in the generated code.</p>
+</div>
+<div class="section" id="saving-loading-chats">
+<h4>Saving &amp; Loading Chats<a class="headerlink" href="#saving-loading-chats" title="Permalink to this headline">¶</a></h4>
+<p>On the <strong>Other</strong> tab, there are also buttons to <strong>Save</strong> and <strong>Load</strong>. These buttons lead to a different save screen than the main game. You can save chatrooms here and load them later to edit, play, or export to code. They will be saved with the name of the chatroom, which can also be changed on the <strong>Other</strong> tab.</p>
+</div>
+</div>
+<div class="section" id="editing-messages">
+<h3>Editing Messages<a class="headerlink" href="#editing-messages" title="Permalink to this headline">¶</a></h3>
+<p>In the chatroom creator, you can also edit messages by clicking on them in the preview window. Most messages will have the following options:</p>
+<dl class="simple">
+<dt><cite>Remove message</cite></dt><dd><p>Remove this message from the chatlog.</p>
+</dd>
+<dt><cite>Insert message before</cite></dt><dd><p>Creates an overlay above the selected message. Any new messages will then be added at that particular location in the chatlog. Click the overlay to remove it, and new messages will be added to the bottom of the chat as usual.</p>
+</dd>
+<dt><cite>Edit text</cite></dt><dd><p>Update the text and/or speaker of the selected message. You can change the font, size, and the bold/italics/underine of the message.</p>
+</dd>
+<dt><cite>Change bubble</cite></dt><dd><p>Change the bubble used for this message.</p>
+</dd>
+<dt><cite>Change speaker</cite></dt><dd><p>Change the speaker of this message.</p>
+</dd>
+<dt><cite>Change profile picture</cite></dt><dd><p>Update the profile picture of the current speaker.</p>
+</dd>
+</dl>
+<p>Note that when editing an emoji, you can only choose another emoji to swap it with. If you’d like to add text instead of an emoji, you can use the message dropdown to remove the emoji, and then click on the line below the one where you’d like to add the new message and click <strong>Insert message before</strong>. Then type your new message and add it to the chatlog.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="phone-calls.html" class="btn btn-neutral float-right" title="Phone Calls" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="git-setup.html" class="btn btn-neutral float-left" title="Git Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Shawna P.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
